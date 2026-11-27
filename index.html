@@ -129,13 +129,112 @@ footer{color:var(--mut);font-size:14px}
 </div></header>
 
 <nav class="tabs-top" aria-label="차시 선택"><div class="in">
+  <a href="#s0" data-tab="s0"><b>0차시</b><span>사전 준비</span></a>
   <a href="#s1" data-tab="s1"><b>1차시</b><span>캔버스로 첫 웹앱</span></a>
   <a href="#s2" data-tab="s2"><b>2차시</b><span>GitHub Pages 공유</span></a>
   <a href="#s3" data-tab="s3"><b>3차시</b><span>AI Studio · Vercel</span></a>
-  <a href="#s4" data-tab="s4" class="adv"><b>4차시</b><span>Antigravity 상호작용</span></a>
+  <a href="#s4" data-tab="s4" class="adv"><b>4차시</b><span>Antigravity 단원 앱</span></a>
   <a href="#s5" data-tab="s5" class="adv"><b>5차시</b><span>Apps Script · API</span></a>
   <a href="#s6" data-tab="s6" class="adv"><b>6차시</b><span>Supabase 실시간</span></a>
 </div></nav>
+
+<!-- ======================= 0차시 ======================= -->
+<div class="panel" id="p-s0" hidden>
+<section class="band"><div class="wrap">
+  <h2>0차시 · 연수 전 준비 (사전 과제)</h2>
+  <p class="lead">가입과 인증은 휴대폰·메일함이 필요해 연수 당일 강사가 대신 해 드릴 수 없습니다. <b>기본과정은 1·2단계(약 30분)</b>, <b>심화과정은 3단계까지(추가 20분)</b> 미리 끝내 주세요. 체크 상태는 이 브라우저에 저장됩니다.</p>
+  <div class="prog"><div class="bar"><i data-bar="s0"></i></div><small data-txt="s0"></small></div>
+  <div class="sub"><a href="#s0-acc">가입할 사이트</a><a href="#s0-name">사용자명·주소</a><a href="#s0-repo">저장소·Pages 규칙</a><a href="#s0-pc">내 컴퓨터 준비</a><a href="#s0-git">Git 설정</a><a href="#s0-trouble">막힐 때</a></div>
+  <ol class="steps" data-steps="s0"></ol>
+</div></section>
+
+<section class="band" id="s0-acc"><div class="wrap">
+  <h2>가입할 사이트 (이 순서대로)</h2>
+  <p class="lead">Vercel과 Supabase는 <b>GitHub로 계속하기</b>로 가입하므로, 실제로 새로 만드는 계정은 Google과 GitHub 두 개입니다. Chrome 한 곳에서 같은 계정으로 로그인해 두세요.</p>
+  <table class="stack"><thead><tr><th>순서</th><th>서비스</th><th>무엇에 쓰나</th><th>처음 쓰는 차시</th><th>가입 방법</th></tr></thead><tbody>
+    <tr><td>1</td><td><a href="https://accounts.google.com" target="_blank" rel="noopener">Google 계정</a></td><td>Gemini 캔버스, AI Studio, 시트·Apps Script, Antigravity 로그인</td><td>1차시</td><td>개인 Gmail 권장 (학교 계정은 AI 서비스·외부 배포가 막혀 있을 수 있음)</td></tr>
+    <tr><td>1-1</td><td><a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a> (선택)</td><td>캔버스 기능 비교</td><td>1차시</td><td>Google 계정으로 로그인 가능</td></tr>
+    <tr><td>2</td><td><a href="https://github.com/signup" target="_blank" rel="noopener">GitHub</a></td><td>코드 보관, GitHub Pages 배포</td><td>2차시</td><td>이메일 가입 → 인증 코드 → <b>2단계 인증</b> → 이메일 비공개</td></tr>
+    <tr><td>3</td><td><a href="https://vercel.com/signup" target="_blank" rel="noopener">Vercel</a></td><td>앱 배포 (vercel.app 주소)</td><td>3·4차시</td><td>Hobby 선택 → Continue with GitHub → 저장소 권한 All repositories</td></tr>
+    <tr><td>4</td><td><a href="https://supabase.com/dashboard" target="_blank" rel="noopener">Supabase</a> (심화)</td><td>데이터베이스, 실시간 기능</td><td>6차시</td><td>Continue with GitHub → 조직 이름 정하기 (Free)</td></tr>
+    <tr><td>5</td><td><a href="https://aistudio.google.com" target="_blank" rel="noopener">AI Studio</a> 확인</td><td>3차시 앱 빌더, 5차시 API 키</td><td>3차시</td><td>개인 Gmail로 로그인해 열리는지만 확인 (API 키는 5차시 당일에 만들기)</td></tr>
+  </tbody></table>
+  <div class="grid" style="margin-top:18px">
+    <div class="card"><h3>GitHub 2단계 인증</h3><p>Settings → Password and authentication → Enable two-factor authentication → 인증 앱(Google·Microsoft Authenticator)으로 QR → 6자리 코드 입력 → <b>복구 코드 내려받아 보관</b></p></div>
+    <div class="card"><h3>이메일 비공개</h3><p>Settings → Emails → <b>Keep my email addresses private</b> 체크 → 아래에 보이는 …@users.noreply.github.com 주소 복사 (Git 설정에 사용)</p></div>
+    <div class="card"><h3>Vercel 무료 플랜</h3><p>Hobby 플랜은 개인·비상업 용도입니다. 연수 실습과 수업 자료 제작 연습용으로 사용하세요.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="s0-name"><div class="wrap">
+  <h2>사용자명은 내 웹 주소가 됩니다</h2>
+  <p class="lead">GitHub 사용자명은 <b>영문 소문자·숫자·하이픈</b>으로 짧게 정하세요. 나중에 바꾸면 이미 공유한 주소가 모두 열리지 않습니다.</p>
+  <div class="two">
+    <form class="fields" onsubmit="return false">
+      <div><label class="f" for="ghUser">GitHub 사용자명</label><input type="text" id="ghUser" value="horim-teacher" autocomplete="off"></div>
+      <div><label class="f" for="ghRepo">저장소 이름 (예시)</label><input type="text" id="ghRepo" value="quiz-app" autocomplete="off"></div>
+      <p class="note" id="ghWarn"></p>
+    </form>
+    <div class="out" aria-live="polite"><div class="tag">학생에게 공유될 주소</div><div class="big" id="ghAddr"></div><p class="note">2차시 GitHub Pages 주소 형태입니다. Vercel 주소는 3차시에 따로 생깁니다.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="s0-repo"><div class="wrap">
+  <h2>저장소와 GitHub Pages 기본 규칙</h2>
+  <table class="stack"><thead><tr><th>항목</th><th>규칙</th><th>예시·이유</th></tr></thead><tbody>
+    <tr><td>저장소 이름</td><td>영문 소문자·숫자·하이픈, 앱마다 하나</td><td>quiz-app, sim-app, unit-app</td></tr>
+    <tr><td>공개 범위</td><td>Public</td><td>무료 계정의 GitHub Pages는 공개 저장소에서만 동작</td></tr>
+    <tr><td>첫 화면 파일</td><td>index.html (이름 그대로)</td><td>주소로 열면 자동으로 보이는 파일</td></tr>
+    <tr><td>함께 올릴 것</td><td>README.md, prd.md</td><td>앱 소개와 설계도</td></tr>
+    <tr><td>절대 올리지 않을 것</td><td>학생 이름·성적, API 키, 비밀번호, .env</td><td>공개 저장소는 누구나 볼 수 있음</td></tr>
+    <tr><td>Pages 켜기</td><td>Settings → Pages → Deploy from a branch → main · / (root) → Save</td><td>1~2분 뒤 위쪽에 주소 표시</td></tr>
+  </tbody></table>
+</div></section>
+
+<section class="band" id="s0-pc"><div class="wrap">
+  <h2>내 컴퓨터 준비 (심화과정)</h2>
+  <p class="lead">학교 PC는 설치 권한이 막혀 있는 경우가 많아 <b>개인 노트북</b>을 권장합니다. 확인 명령은 Windows는 PowerShell, Mac은 터미널에 입력합니다.</p>
+  <table class="stack"><thead><tr><th>프로그램</th><th>내려받기</th><th>왜 필요한가</th><th>설치 확인</th></tr></thead><tbody>
+    <tr><td>Chrome</td><td><a href="https://www.google.com/chrome/" target="_blank" rel="noopener">google.com/chrome</a></td><td>앱 확인, 개발자 도구로 화면 크기 확인</td><td>실행되면 OK</td></tr>
+    <tr><td>Git</td><td><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git-scm.com</a></td><td>코드 기록, GitHub에 올리기</td><td><code>git --version</code></td></tr>
+    <tr><td>Node.js (LTS)</td><td><a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a></td><td>Vite·React 앱 만들고 실행하기</td><td><code>node -v</code></td></tr>
+    <tr><td>Antigravity</td><td><a href="https://antigravity.google" target="_blank" rel="noopener">antigravity.google</a></td><td>에이전트형 개발 도구 (4~6차시)</td><td>개인 Gmail로 로그인</td></tr>
+  </tbody></table>
+  <div class="warnbox">학교 와이파이에서 github.com · vercel.com · supabase.com · aistudio.google.com이 열리는지 미리 확인하세요. 막혀 있으면 정보 담당자에게 허용을 요청하거나 휴대폰 테더링을 준비합니다.</div>
+</div></section>
+
+<section class="band" id="s0-git"><div class="wrap">
+  <h2>Git에 내 이름과 이메일 알려 주기 (심화과정)</h2>
+  <p class="lead">Git은 기록마다 작성자를 남깁니다. 이메일에는 GitHub의 <b>noreply 주소</b>를 넣어 개인 메일이 공개되지 않게 하세요. 아래를 채우면 명령이 완성됩니다.</p>
+  <div class="two">
+    <form class="fields" onsubmit="return false">
+      <div><label class="f" for="gcName">이름 (영문, 보통 GitHub 사용자명)</label><input type="text" id="gcName" value="horim-teacher" autocomplete="off"></div>
+      <div><label class="f" for="gcMail">GitHub noreply 이메일</label><input type="text" id="gcMail" placeholder="12345678+아이디@users.noreply.github.com" autocomplete="off"></div>
+      <p class="note">Settings → Emails 화면 아래쪽에 보이는 주소를 그대로 복사해 넣으세요.</p>
+    </form>
+    <div class="out" aria-live="polite"><div class="tag">터미널에 붙여 넣을 명령</div><div class="big" id="gcOut" style="font-size:14px"></div><button type="button" data-copy="#gcOut">명령 복사</button></div>
+  </div>
+  <h3 style="margin-top:22px">처음 GitHub에 올릴 때의 로그인</h3>
+  <div class="grid">
+    <div class="card"><h3>Windows</h3><p>Git과 함께 설치되는 로그인 도우미가 브라우저 창을 띄웁니다. <b>Sign in with your browser → Authorize</b>를 누르면 끝납니다.</p></div>
+    <div class="card"><h3>Mac</h3><p>터미널이 비밀번호를 물으면 멈추고, 에이전트에게 "GitHub CLI를 설치하고 gh auth login으로 로그인 도와줘"라고 요청해 브라우저에서 승인합니다.</p></div>
+    <div class="card"><h3>미리 연습</h3><p>빈 저장소 하나를 만들어 두면 4차시 첫 푸시에서 로그인 단계를 빨리 넘길 수 있습니다.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="s0-trouble"><div class="wrap">
+  <h2>막힐 때</h2>
+  <table class="stack"><thead><tr><th>이런 상황이면</th><th>이렇게 해 보세요</th></tr></thead><tbody>
+    <tr><td>인증 메일이 안 옴</td><td>스팸함·프로모션함 확인. 학교 메일이면 개인 메일로 다시 가입</td></tr>
+    <tr><td>사용자명이 이미 있음</td><td>뒤에 과목·숫자 붙이기 (예: horim-info)</td></tr>
+    <tr><td>휴대폰을 바꿔 2단계 인증 불가</td><td>보관한 복구 코드로 로그인 → 새 휴대폰으로 다시 등록</td></tr>
+    <tr><td>Vercel에서 저장소가 안 보임</td><td>Import 화면의 Adjust GitHub App Permissions → 저장소 권한 추가</td></tr>
+    <tr><td>Pages 주소가 404</td><td>파일 이름 index.html, 저장소 Public, 1~2분 기다린 뒤 새로고침</td></tr>
+    <tr><td>학교 계정으로 AI 서비스 차단</td><td>개인 Gmail로 다시 로그인</td></tr>
+    <tr><td>git, node 명령을 찾을 수 없음</td><td>설치 후 PowerShell·터미널을 완전히 닫았다가 다시 열기</td></tr>
+  </tbody></table>
+</div></section>
+</div>
 
 <!-- ======================= 1차시 ======================= -->
 <div class="panel" id="p-s1">
@@ -149,7 +248,7 @@ footer{color:var(--mut);font-size:14px}
 
 <section class="band" id="s1-build"><div class="wrap">
   <h2>실습 ① 3줄로 무작정 만들어 보기</h2>
-  <p class="lead"><b>무엇을</b>(학교급·학년·과목·단원·앱 종류) → <b>어떻게 동작</b>(기능) → <b>어떤 형태로</b>(하나의 HTML 파일, 휴대폰 화면)</p>
+  <p class="lead"><b>무엇을</b>(학교급·학년·과목·단원·앱 종류) → <b>어떻게 동작</b>(기능) → <b>어떤 형태로</b>(하나의 HTML 파일, 태블릿·노트북 화면)</p>
   <div class="two">
     <form class="fields" onsubmit="return false">
       <div class="row2">
@@ -229,7 +328,7 @@ footer{color:var(--mut);font-size:14px}
   <div class="out" style="max-width:900px;margin-top:16px"><div class="tag">PRD 기반 제작 프롬프트 (캔버스)</div><div class="big" id="simBuild">아래 PRD대로 교과 시뮬레이터를 하나의 HTML 파일로 만들어줘.
 '핵심 기능'의 필수 항목부터 구현하고, '있으면 좋은 기능'은 다음 단계로 제안만 해줘.
 화면 아래에 사용한 공식·규칙과 단순화한 부분을 보여주는 '원리' 영역을 넣어줘.
-학생 휴대폰에서도 조작하기 쉽게 슬라이더와 버튼을 크게 만들어줘.
+태블릿·노트북 화면(가로 1024px 이상)에서 조작하기 쉽게 슬라이더와 버튼을 크게 만들어줘.
 
 (여기에 sim-app 폴더의 prd.md 내용을 붙여 넣기)</div><button type="button" data-copy="#simBuild">프롬프트 복사</button></div>
   <div class="grid">
@@ -386,7 +485,7 @@ footer{color:var(--mut);font-size:14px}
 
 <section class="band" id="s2-qr"><div class="wrap">
   <h2>QR 코드 만들기</h2>
-  <p class="lead">내 Pages 주소를 붙여 넣으면 QR 코드가 바로 만들어집니다. 화면을 띄워 놓고 휴대폰으로 찍어 보세요.</p>
+  <p class="lead">내 Pages 주소를 붙여 넣으면 QR 코드가 바로 만들어집니다. 태블릿은 카메라로 찍고, 노트북은 주소를 입력하거나 클래스룸·패들렛에 링크를 올려 접속합니다.</p>
   <div class="qr">
     <div class="fields"><div><label class="f" for="qr2in">주소</label><input type="url" id="qr2in" placeholder="https://아이디.github.io/저장소이름/" autocomplete="off"></div><p class="note">QR 이미지는 마우스 오른쪽 버튼으로 복사하거나 화면 캡처로 저장하세요.</p></div>
     <div class="qrbox" id="qr2"></div>
@@ -419,7 +518,7 @@ footer{color:var(--mut);font-size:14px}
   <div class="out" style="max-width:900px;margin-top:16px">
     <div class="big" id="sysText">너는 중·고등학생용 수업 도구를 만드는 개발자야.
 이 앱은 GitHub에 올려 Vercel로 배포할 거야. Vercel에 쉽게 배포할 수 있도록 서버 코드 없이 프론트엔드(Vite + React)로 만들되, 화면을 여러 개로 나누고 기능별로 파일을 구성해 확장하기 좋게 만들어줘.
-모든 화면은 한국어로, 글자는 크게, 학생 휴대폰 화면을 먼저 고려해.
+모든 화면은 한국어로, 글자는 크게, 태블릿 가로(1024×768) 이상과 노트북·PC 화면을 기준으로 해.
 학생 이름·학번 같은 개인정보는 입력받지 마.</div>
     <button type="button" data-copy="#sysText">시스템 지침 복사</button>
   </div>
@@ -536,44 +635,88 @@ footer{color:var(--mut);font-size:14px}
 <!-- ======================= 4차시 ======================= -->
 <div class="panel" id="p-s4" hidden>
 <section class="band"><div class="wrap">
-  <h2>4차시 · Antigravity 입문 & 학생과 상호작용하는 웹앱</h2>
-  <p class="lead">3차시 저장소를 내 컴퓨터로 가져와, 에이전트의 계획을 읽고 승인하며 학생과 주고받는 기능을 더합니다. 원칙: <b>기능 추가는 Planning, 작은 수정은 Fast</b>.</p>
+  <h2>4차시 · Antigravity 입문 & 단원 학습 앱 만들기</h2>
+  <p class="lead">심화과정은 <b>새 앱</b>으로 시작합니다. 한 단원(3~5차시)을 담은 학습 앱을 Antigravity 안에서 <b>/grill-me</b> 인터뷰로 설계(prd.md)하고, 단계별로 만듭니다. 화면 기준은 <b>태블릿 가로(1024×768) 이상</b> — 태블릿·노트북·PC에서 씁니다. 이 앱을 5·6차시에서 계속 키웁니다.</p>
   <div class="prog"><div class="bar"><i data-bar="s4"></i></div><small data-txt="s4"></small></div>
-  <div class="sub"><a href="#s4-clone">저장소 가져오기</a><a href="#s4-rules">규칙</a><a href="#s4-build">상호작용 프롬프트</a><a href="#s4-plan">계획서 확인</a><a href="#s4-fast">Fast 문장</a><a href="#s4-data">제출 데이터</a><a href="#s4-push">푸시</a><a href="#s4-trouble">막힐 때</a></div>
+  <div class="sub"><a href="#s4-rules">폴더·규칙</a><a href="#s4-unit">/grill-me 설계도</a><a href="#s4-build">단계별 프롬프트</a><a href="#s4-plan">계획서 확인</a><a href="#s4-fast">Fast 문장</a><a href="#s4-device">화면 크기 확인</a><a href="#s4-push">배포</a><a href="#s4-trouble">막힐 때</a></div>
   <ol class="steps" data-steps="s4"></ol>
 </div></section>
 
-<section class="band" id="s4-clone"><div class="wrap">
-  <h2>3차시 저장소 가져오기</h2>
-  <div class="two">
-    <form class="fields" onsubmit="return false">
-      <div><label class="f" for="cloneUrl">3차시 GitHub 저장소 주소</label><input type="url" id="cloneUrl" placeholder="https://github.com/아이디/science-quiz-v2" autocomplete="off"></div>
-      <p class="note">GitHub에서 저장소를 열었을 때 주소창의 주소입니다. 명령 승인 화면이 나오면 내용을 확인하고 승인하세요.</p>
-    </form>
-    <div class="out"><div class="tag">에이전트에게 보낼 문장</div><div class="big" id="cloneOut"></div><button type="button" data-copy="#cloneOut">문장 복사</button></div>
-  </div>
-</div></section>
-
 <section class="band" id="s4-rules"><div class="wrap">
-  <h2>규칙(Rules) — 이 폴더에서 항상 지킬 약속</h2>
-  <p class="lead">AI Studio의 시스템 지침과 같은 역할입니다. 에이전트 설정의 규칙(Rules)에 붙여 넣으세요.</p>
+  <h2>폴더 준비와 규칙(Rules)</h2>
+  <p class="lead">바탕화면에 빈 폴더(예: <b>unit-app</b>)를 만들어 Antigravity에서 엽니다. 아래 규칙은 에이전트 설정의 규칙(Rules)에 붙여 넣으세요. 규칙에 나오는 prd.md는 다음 단계에서 <b>/grill-me</b>로 만들어 이 폴더에 저장합니다.</p>
   <div class="out" style="max-width:900px;margin-top:16px">
-    <div class="big" id="rulesText">이 앱은 중·고등학생용 수업 도구이고 GitHub에 푸시하면 Vercel로 자동 배포돼.
-서버 코드 없이 프론트엔드(Vite + React) 구조를 유지해.
-prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도 함께 고쳐.
+    <div class="big" id="rulesText">이 앱은 중·고등학생이 태블릿 가로(1024×768) 이상의 화면에서 쓰는 단원 학습 앱이야.
+prd.md를 설계 기준으로 삼고, '개발 단계'를 한 번에 하나씩만 진행해.
+서버 코드 없이 Vite + React로 만들고, 기능을 바꾸면 prd.md와 README.md도 함께 고쳐.
 기능을 바꾸기 전에 구현 계획을 먼저 보여주고 내 승인을 받아.
-작업이 끝나면 브라우저로 직접 실행해 확인하고, 무엇을 바꿨는지 한국어로 보고해.
-학생 개인정보는 입력받지 말고, 학생은 번호나 닉네임만 써.</div>
+작업이 끝나면 1024×768과 1366×768 화면에서 직접 실행해 확인하고, 무엇을 바꿨는지 한국어로 보고해.
+학생 이름은 받지 말고 학급 코드와 닉네임(또는 번호)만 써.</div>
     <button type="button" data-copy="#rulesText">규칙 복사</button>
   </div>
 </div></section>
 
-<section class="band" id="s4-build"><div class="wrap">
-  <h2>상호작용 기능 프롬프트 (Planning 모드)</h2>
-  <p class="lead">기능 · 계획 먼저 · 확인 · 지킬 것의 4줄 공식입니다. 기능 하나를 끝까지 '계획 → 승인 → 검증'한 뒤 다음 기능으로 넘어가세요.</p>
+<section class="band" id="s4-unit"><div class="wrap">
+  <h2>/grill-me로 단원 설계도(prd.md) 만들기</h2>
+  <p class="lead">Antigravity의 기본 명령 <b>/grill-me</b>로 설계 인터뷰를 합니다. 에이전트가 질문을 <b>하나씩</b> 묻고, 질문마다 <b>추천 답(1번)</b>이 있는 선택지를 줍니다. 결정이 끝나 합의하면 prd.md를 이 폴더에 저장합니다. 가장 공들일 곳은 <b>차시별 탐구 활동</b>입니다.</p>
+  <div class="grid" style="margin-top:14px">
+    <div class="card"><h3>① 기본 명령</h3><p>/grill-me는 Antigravity에 기본으로 들어 있어 설치할 것이 없습니다. 입력창에 <b>/</b>를 치고 목록에서 grill-me를 고르세요.</p></div>
+    <div class="card"><h3>② 한 번에 하나씩</h3><p>질문을 하나씩 묻고, 번호 붙은 답 목록에서 <b>1번이 추천 답</b>입니다. 번호를 고르거나 직접 써서 답합니다.</p></div>
+    <div class="card"><h3>③ 합의 후 실행</h3><p>결정이 다 정해질 때까지 코드를 쓰지 않습니다. 끝나면 정리된 내용을 확인하고 prd.md로 저장합니다.</p></div>
+  </div>
+  <h3 style="margin-top:22px">/grill-me 첫 메시지: 단원 브리프</h3>
+  <p class="note">예시를 누르거나 직접 입력하세요. 완성된 브리프를 복사해 Antigravity 입력창에 붙여 넣습니다(맨 앞의 /grill-me 포함).</p>
+  <div class="chips" id="unitEx" style="margin-top:14px"></div>
   <div class="two">
     <form class="fields" onsubmit="return false">
-      <div><span class="lbl">추가할 기능</span><div class="radios chips" id="itype"></div></div>
+      <div class="row2">
+        <div><label class="f" for="uSubj">학교급·학년·과목</label><input type="text" id="uSubj" value="중학교 정보"></div>
+        <div><label class="f" for="uN">차시 수</label><select id="uN"><option>3</option><option selected>4</option><option>5</option></select></div>
+      </div>
+      <div><label class="f" for="uName">단원명</label><input type="text" id="uName" value="알고리즘과 프로그래밍"></div>
+      <div><label class="f" for="uLessons">차시별 주제 (한 줄에 하나)</label><textarea id="uLessons">문제 분해와 알고리즘
+순차·선택·반복 구조
+변수와 리스트
+프로그램 설계와 디버깅</textarea></div>
+      <div><label class="f" for="uAct">떠오르는 탐구 활동 (없으면 비워 두기)</label><textarea id="uAct">절차 카드를 끌어 올바른 순서로 배열
+명령 블록(앞으로·돌기·반복·만약)을 끌어 로봇이 미로 통과
+코드를 한 줄씩 실행하며 변수·리스트 값 추적</textarea></div>
+    </form>
+    <div class="out" aria-live="polite"><div class="tag">/grill-me 브리프 (Antigravity)</div><div class="big" id="uOut" style="font-size:14px"></div><button type="button" data-copy="#uOut">브리프 복사</button></div>
+  </div>
+  <h3 style="margin-top:22px">질문에 답하는 법</h3>
+  <div class="grid">
+    <div class="card"><h3>번호로 짧게</h3><p>추천 답(1번)이 마음에 들면 번호만 고르면 됩니다. 다르면 "직접 입력"에 내 생각을 씁니다.</p></div>
+    <div class="card"><h3>교과 전문성은 여기에</h3><p>추천 답은 출발점입니다. 탐구 활동과 형성평가 질문에서는 내 수업 경험으로 고쳐 주세요.</p></div>
+    <div class="card"><h3>모르면 되묻기</h3><p>"Q2의 두 선택지 차이를 학생 입장에서 설명해줘"처럼 물어도 됩니다.</p></div>
+  </div>
+  <ul class="lines" id="gAns" style="margin-top:14px"></ul>
+  <h3 style="margin-top:22px">합의가 끝나면 prd.md로 저장</h3>
+  <p class="note">질문이 끝나면 에이전트가 정한 내용을 정리해 보여 줍니다. 요약을 읽고 고칠 점을 말한 뒤 아래 문장을 보내세요(아래 형식이 함께 들어 있습니다).</p>
+  <div class="out" style="max-width:900px;margin-top:10px"><div class="tag">합의 후 보낼 문장</div><div class="big" id="gSave" style="font-size:13px;max-height:260px;overflow:auto"></div><button type="button" data-copy="#gSave">문장 복사</button></div>
+  <div class="codehead"><b>단원 학습 앱 prd.md 형식 (참고용)</b><button type="button" class="ghost sm" data-copy="#uTpl">형식 복사</button></div>
+  <pre class="code" id="uTpl"></pre>
+  <h3 style="margin-top:22px">설계도 점검 세 가지</h3>
+  <div class="grid">
+    <div class="card"><h3>활동이 구체적인가</h3><p>"반복 구조를 이해한다"가 아니라 "반복 블록에 횟수를 넣어 로봇을 4칸 이동시킨다"처럼 학생의 조작이 보이게</p></div>
+    <div class="card"><h3>단계가 나뉘었나</h3><p>1단계 뼈대 → 2단계 차시 학습 → 3단계 탐구 활동 → 4단계 마무리·기록</p></div>
+    <div class="card"><h3>기준이 적혔나</h3><p>태블릿 가로 이상, 좁은 화면 안내, 이름 받지 않음, 서버 없음</p></div>
+  </div>
+  <p class="note" style="margin-top:14px">설계도를 고칠 때는 Fast 모드로 아래 문장을 보내세요.</p>
+  <ul class="lines" id="uFix"></ul>
+  <details style="margin-top:18px"><summary><b>대안: /grill-me가 목록에 없을 때 (일반 대화창 인터뷰)</b></summary>
+    <p class="note">Gemini·ChatGPT 일반 대화창에 아래 프롬프트를 보내 prd.md를 받은 뒤, unit-app 폴더에 prd.md 파일을 만들어 붙여 넣습니다.</p>
+    <div class="out" style="max-width:900px;margin-top:10px"><div class="big" id="uOut2" style="font-size:13px;max-height:260px;overflow:auto"></div><button type="button" data-copy="#uOut2">프롬프트 복사</button></div>
+  </details>
+</div></section>
+
+<section class="band" id="s4-build"><div class="wrap">
+  <h2>단계별 프롬프트 (Planning 모드)</h2>
+  <p class="lead">한 번에 다 만들지 않습니다. 단계마다 <b>계획 → 승인 → 브라우저 확인</b>을 마친 뒤 다음 단계로 넘어가세요. 오늘은 2단계까지가 기본, 3·4단계는 도전입니다.</p>
+  <div class="two">
+    <form class="fields" onsubmit="return false">
+      <div><span class="lbl">진행할 단계</span><div class="radios chips" id="stg"></div></div>
+      <div id="stgLessonWrap"><label class="f" for="stgLesson">탐구 활동을 만들 차시</label><select id="stgLesson"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
       <div><span class="lbl">함께 넣을 것</span><div class="chips" id="iopt"></div></div>
     </form>
     <div class="out" aria-live="polite"><div class="tag">완성된 프롬프트</div><div class="big" id="p4"></div><button type="button" data-copy="#p4">프롬프트 복사</button><p class="note">모드는 <b>Planning</b>으로 두고 보내세요.</p></div>
@@ -583,9 +726,9 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
 <section class="band" id="s4-plan"><div class="wrap">
   <h2>계획서는 세 가지만 확인하세요</h2>
   <div class="grid">
-    <div class="card"><h3>1. 무엇을 바꾸나요?</h3><p>요청한 기능만 바꾸는지, 엉뚱한 화면까지 바꾸지 않는지</p></div>
+    <div class="card"><h3>1. 이번 단계만 하나요?</h3><p>요청한 단계만 만드는지, 다음 단계까지 한꺼번에 만들려 하지 않는지</p></div>
     <div class="card"><h3>2. 무엇이 새로 생기나요?</h3><p>서버 코드, 로그인 기능처럼 요청하지 않은 것이 추가되지 않는지</p></div>
-    <div class="card"><h3>3. 학생 정보를 받나요?</h3><p>이름·학번 입력란이 생기지 않는지. 번호나 닉네임이면 괜찮음</p></div>
+    <div class="card"><h3>3. 학생 정보를 받나요?</h3><p>이름·학번 입력란이 생기지 않는지. 학급 코드와 닉네임이면 괜찮음</p></div>
   </div>
   <h3 style="margin-top:22px">계획서에 다는 댓글 예시</h3>
   <ul class="lines" id="planCm"></ul>
@@ -597,33 +740,47 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
   <ul class="lines" id="fastList"></ul>
 </div></section>
 
-<section class="band" id="s4-data"><div class="wrap">
-  <h2>5차시 준비: 제출 데이터 묶음 만들어 두기</h2>
-  <p class="lead">다음 시간에 구글 시트로 보낼 내용을 미리 하나로 묶어 둡니다. 오늘은 전송하지 않습니다.</p>
-  <table class="stack"><thead><tr><th>항목</th><th>예시</th><th>비고</th></tr></thead><tbody>
-    <tr><td>nickname</td><td>3번 / 별빛</td><td>이름·학번은 받지 않음</td></tr>
-    <tr><td>score</td><td>4</td><td>맞힌 개수</td></tr>
-    <tr><td>results</td><td>O, O, X, O, O</td><td>문항별 결과</td></tr>
-    <tr><td>understanding</td><td>알겠다 3, 헷갈린다 2</td><td>이해도 신호등(있으면)</td></tr>
-    <tr><td>essay</td><td>(5차시에 추가)</td><td>서술형 답</td></tr>
+<section class="band" id="s4-device"><div class="wrap">
+  <h2>화면 크기로 직접 확인하기</h2>
+  <p class="lead">앱 화면에서 <b>F12</b>(맥: ⌥⌘I) → 왼쪽 위 기기 아이콘(기기 모드) → 크기를 직접 입력해 바꿔 가며 확인합니다.</p>
+  <table class="stack"><thead><tr><th>크기</th><th>기기</th><th>확인할 것</th></tr></thead><tbody>
+    <tr><td>1024 × 768</td><td>태블릿 가로 (최소 기준)</td><td>개념 카드·활동이 한 화면에 들어오는지, 손가락으로 누르기 쉬운 버튼 크기인지</td></tr>
+    <tr><td>1180 × 820</td><td>태블릿(아이패드 에어 등) 가로</td><td>끌어 놓기 활동이 터치로 되는지</td></tr>
+    <tr><td>1366 × 768</td><td>노트북·크롬북</td><td>스크롤 없이 학습 영역이 보이는지</td></tr>
+    <tr><td>1920 × 1080</td><td>교실 PC·모니터</td><td>내용이 가운데로 모이고 너무 늘어나지 않는지</td></tr>
+    <tr><td>390 × 844</td><td>휴대폰</td><td>'태블릿이나 노트북에서 열어 주세요' 안내가 뜨는지</td></tr>
   </tbody></table>
-  <div class="out" style="max-width:900px;margin-top:16px"><div class="big" id="dataOut">퀴즈를 끝내면 nickname(닉네임 또는 번호), score(맞힌 개수), results(문항별 O/X 배열), understanding(이해도 신호등 집계)을 하나의 데이터 묶음(JSON)으로 만드는 함수를 만들고, 결과 화면에서 콘솔에 보여줘. 전송은 아직 하지 마. 학생 이름은 받지 마.</div><button type="button" data-copy="#dataOut">문장 복사</button></div>
 </div></section>
 
 <section class="band" id="s4-push"><div class="wrap">
-  <h2>푸시해서 자동 재배포</h2>
-  <div class="out" style="max-width:900px;margin-top:16px"><div class="big" id="pushOut">오늘 바뀐 내용을 한국어 커밋 메시지로 커밋하고 GitHub에 푸시해줘. 푸시 전에 실행할 명령을 먼저 보여줘.</div><button type="button" data-copy="#pushOut">문장 복사</button></div>
-  <p class="note">처음 푸시할 때 GitHub 로그인 창이 뜨면 브라우저에서 승인합니다. 1~2분 뒤 Vercel Deployments에 새 배포가 생기고 같은 vercel.app 주소에 반영됩니다.</p>
+  <h2>GitHub에 올리고 Vercel로 배포</h2>
+  <p class="lead">github.com → <b>New repository</b>에서 빈 저장소(README 없이, 예: unit-app)를 만들고 주소를 아래에 넣으세요. 커밋·푸시는 에이전트가 합니다.</p>
+  <div class="two">
+    <form class="fields" onsubmit="return false">
+      <div><label class="f" for="newRepo">새 GitHub 저장소 주소</label><input type="url" id="newRepo" placeholder="https://github.com/아이디/unit-app" autocomplete="off"></div>
+      <p class="note">처음 푸시할 때 GitHub 로그인 창이 뜨면 브라우저에서 승인합니다.</p>
+    </form>
+    <div class="out"><div class="tag">에이전트에게 보낼 문장</div><div class="big" id="push4"></div><button type="button" data-copy="#push4">문장 복사</button></div>
+  </div>
+  <table class="stack" style="margin-top:18px"><thead><tr><th>Vercel 처음 연결 (한 번만)</th><th>할 일</th></tr></thead><tbody>
+    <tr><td>1. 가입·로그인</td><td>vercel.com → Continue with GitHub</td></tr>
+    <tr><td>2. 프로젝트 가져오기</td><td>Add New → Project → unit-app 저장소 Import</td></tr>
+    <tr><td>3. 설정 확인</td><td>Framework Preset이 Vite인지 확인 → Deploy</td></tr>
+    <tr><td>4. 주소 확인</td><td>vercel.app 주소를 태블릿·노트북에서 열기</td></tr>
+    <tr><td>다음부터</td><td>"바뀐 내용을 커밋하고 푸시해줘" → 같은 주소에 자동 반영</td></tr>
+  </tbody></table>
 </div></section>
 
 <section class="band" id="s4-trouble"><div class="wrap">
   <h2>막힐 때</h2>
   <table class="stack"><thead><tr><th>이런 상황이면</th><th>이렇게 해 보세요</th></tr></thead><tbody>
-    <tr><td>사용량 한도 메시지</td><td>모델 선택에서 다른 모델로 바꾸거나 Fast 모드로. 그래도 막히면 같은 요청을 AI Studio Build에서 이어서 진행</td></tr>
-    <tr><td>저장소 내려받기 실패</td><td>Git이 설치되어 있는지 확인 → 설치 후 Antigravity를 다시 시작</td></tr>
+    <tr><td>사용량 한도 메시지</td><td>모델 선택에서 다른 모델로 → Fast 모드로 → 그래도 막히면 AI Studio Build에서 같은 prd.md로 이어서 진행</td></tr>
+    <tr><td>한 번에 다 만들려고 함</td><td>계획서에 댓글: "이번에는 1단계만 해줘. 나머지는 다음 단계에서 할게."</td></tr>
     <tr><td>앱 미리보기가 안 열림</td><td>"필요한 패키지를 설치하고 개발 서버를 실행해줘"라고 요청</td></tr>
+    <tr><td>태블릿 크기에서 잘림</td><td>"1024×768에서 한 화면에 들어오게 고쳐줘" (Fast)</td></tr>
     <tr><td>너무 많이 바뀜</td><td>"방금 변경을 git으로 되돌려줘" 또는 계획 단계에서 승인하지 않기</td></tr>
-    <tr><td>푸시가 안 됨</td><td>GitHub 로그인 창을 승인했는지 확인, 오류 문장을 그대로 에이전트에게 전달</td></tr>
+    <tr><td>Git이 없다는 안내</td><td>git-scm.com에서 Git 설치 후 Antigravity를 다시 시작</td></tr>
+    <tr><td>Vercel 배포 실패</td><td>Deployments → 실패한 배포 → Build Logs의 오류 문장을 복사해 에이전트에게 전달</td></tr>
   </tbody></table>
 </div></section>
 </div>
@@ -632,7 +789,7 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
 <div class="panel" id="p-s5" hidden>
 <section class="band"><div class="wrap">
   <h2>5차시 · Apps Script로 결과 받기 & Gemini API 연결</h2>
-  <p class="lead">학생 결과를 구글 시트에 모으고, 서술형 답에는 AI 피드백을 돌려줍니다. 핵심 원칙: <b>API 키는 브라우저가 아니라 Apps Script(서버 쪽)에만</b> 둡니다.</p>
+  <p class="lead">4차시 단원 학습 앱의 <b>차시 결과</b>를 구글 시트에 모으고, <b>단원 마무리 서술형</b>에는 AI 피드백을 돌려줍니다. 핵심 원칙: <b>API 키는 브라우저가 아니라 Apps Script(서버 쪽)에만</b> 둡니다.</p>
   <div class="prog"><div class="bar"><i data-bar="s5"></i></div><small data-txt="s5"></small></div>
   <div class="sub"><a href="#s5-code">Apps Script 코드 만들기</a><a href="#s5-key">API 키 넣기</a><a href="#s5-deploy">웹 앱 배포 설정</a><a href="#s5-front">앱에 연결 프롬프트</a><a href="#s5-trouble">막힐 때</a></div>
   <ol class="steps" data-steps="s5"></ol>
@@ -644,13 +801,13 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
   <div class="warnbox">상담 기록 등 민감한 업무 데이터는 시트로 보내지 않습니다. 이 차시는 학생 응답(익명·번호) 수집용입니다.</div>
   <form class="fields" onsubmit="return false" style="max-width:900px;margin-top:16px">
     <div class="row2">
-      <div><label class="f" for="gLevel">학교급·학년·과목</label><input type="text" id="gLevel" value="중학교 2학년 과학"></div>
+      <div><label class="f" for="gLevel">학교급·학년·과목</label><input type="text" id="gLevel" value="중학교 정보"></div>
       <div><label class="f" for="gLen">피드백 길이</label><select id="gLen"><option value="2">2문장</option><option value="3" selected>3문장</option><option value="4">4문장</option></select></div>
     </div>
-    <div><label class="f" for="gQ">서술형 문항</label><input type="text" id="gQ" value="차가운 컵 표면에 물방울이 맺히는 까닭을 상태 변화와 관련지어 설명하시오."></div>
-    <div><label class="f" for="gCrit">채점 기준(핵심 개념)</label><textarea id="gCrit">공기 중의 수증기가 차가운 컵 표면에서 열을 잃음
-수증기가 물로 변하는 액화가 일어남
-상태 변화 용어(액화)를 정확히 사용함</textarea></div>
+    <div><label class="f" for="gQ">단원 마무리 서술형 문항</label><input type="text" id="gQ" value="프로그램에서 반복 구조를 쓰면 좋은 까닭을 예를 들어 설명하시오."></div>
+    <div><label class="f" for="gCrit">채점 기준(핵심 개념)</label><textarea id="gCrit">같은 명령을 여러 번 쓰지 않아도 되어 코드가 짧아짐
+알맞은 예시(로봇 이동, 도형 그리기 등)를 듦
+반복 횟수만 바꾸면 쉽게 수정·확장할 수 있음</textarea></div>
   </form>
   <div class="codehead"><b>Code.gs</b><button type="button" data-copy="#gsCode">코드 전체 복사</button></div>
   <pre class="code" id="gsCode"></pre>
@@ -682,6 +839,17 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
 
 <section class="band" id="s5-front"><div class="wrap">
   <h2>앱에 연결하는 프롬프트 (Antigravity · Planning)</h2>
+  <p class="lead">학생이 차시를 마칠 때마다, 그리고 단원 마무리를 마칠 때 아래 결과 묶음을 보냅니다. 시트에는 한 번에 한 줄씩 쌓입니다.</p>
+  <table class="stack"><thead><tr><th>항목</th><th>예시</th><th>비고</th></tr></thead><tbody>
+    <tr><td>room</td><td>2-3</td><td>학급 코드</td></tr>
+    <tr><td>nickname</td><td>3번 / 별빛</td><td>이름·학번은 받지 않음</td></tr>
+    <tr><td>lesson</td><td>2 / 마무리</td><td>차시 번호 또는 '마무리'</td></tr>
+    <tr><td>score · total</td><td>3 · 4</td><td>맞힌 개수 · 전체 문항 수</td></tr>
+    <tr><td>results</td><td>O, O, X, O</td><td>문항별 결과</td></tr>
+    <tr><td>understanding</td><td>헷갈린다</td><td>이해도 신호등</td></tr>
+    <tr><td>reflection</td><td>반복 블록을 쓰니 코드가 짧아져서 신기했다</td><td>한 줄 성찰</td></tr>
+    <tr><td>essay</td><td>(마무리에서만)</td><td>서술형 답 → AI 피드백</td></tr>
+  </tbody></table>
   <div class="two">
     <form class="fields" onsubmit="return false">
       <div><label class="f" for="gsUrl">Apps Script 웹 앱 URL</label><input type="url" id="gsUrl" placeholder="https://script.google.com/macros/s/…/exec" autocomplete="off"></div>
@@ -709,7 +877,7 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
 <div class="panel" id="p-s6" hidden>
 <section class="band"><div class="wrap">
   <h2>6차시 · Supabase 연동 앱 & 성과 공유</h2>
-  <p class="lead">데이터베이스를 연결해 여러 학생의 글과 점수가 모든 화면에 실시간으로 나타나게 합니다. <b>결과 보관은 시트, 실시간 공유는 데이터베이스</b>로 역할을 나눕니다.</p>
+  <p class="lead">단원 앱에 <b>학급 진도판</b>(교사 화면에서 학생×차시 실시간 확인) 또는 <b>차시별 질문 보드</b>를 더합니다. <b>수업 뒤 분석은 시트, 수업 중 실시간은 데이터베이스</b>로 역할을 나눕니다.</p>
   <div class="prog"><div class="bar"><i data-bar="s6"></i></div><small data-txt="s6"></small></div>
   <div class="sub"><a href="#s6-sql">테이블 SQL</a><a href="#s6-env">접속 정보(.env)</a><a href="#s6-front">연동 프롬프트</a><a href="#s6-vercel">Vercel 환경변수</a><a href="#s6-trouble">막힐 때</a><a href="#s6-plan">수업 적용 계획</a></div>
   <ol class="steps" data-steps="s6"></ol>
@@ -721,7 +889,7 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
   <div class="warnbox">상담 기록 등 민감한 업무 데이터는 Supabase에 올리지 않습니다. 학생과 함께 쓰는 공개 데이터만 다룹니다.</div>
   <form class="fields" onsubmit="return false" style="max-width:900px;margin-top:16px">
     <div class="row2">
-      <div><label class="f" for="sqlType">만들 기능</label><select id="sqlType"><option value="board">학급 생각 나눔판</option><option value="scores">퀴즈 실시간 리더보드</option></select></div>
+      <div><label class="f" for="sqlType">만들 기능</label><select id="sqlType"><option value="progress">학급 진도판</option><option value="questions">차시별 질문 보드</option></select></div>
       <div><label class="f" for="sqlRoom">기본 학급 코드</label><input type="text" id="sqlRoom" value="2-3" autocomplete="off"></div>
     </div>
   </form>
@@ -760,7 +928,7 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
     <tr><td>1. 위치</td><td>Vercel 프로젝트 → Settings → Environment Variables</td></tr>
     <tr><td>2. 추가</td><td>VITE_SUPABASE_URL, VITE_SUPABASE_PUBLISHABLE_KEY 두 개를 .env와 같은 값으로 추가</td></tr>
     <tr><td>3. 다시 배포</td><td>Deployments → 최신 배포 ⋯ → Redeploy (환경변수는 새 배포부터 적용)</td></tr>
-    <tr><td>4. 확인</td><td>vercel.app 주소를 두 기기에서 열고 한쪽에서 쓴 글이 다른 쪽에 바로 나타나는지 확인</td></tr>
+    <tr><td>4. 확인</td><td>vercel.app 주소를 학생 화면(태블릿)과 교사 화면(노트북)으로 열고, 학생 쪽 기록이 교사 쪽에 바로 나타나는지 확인</td></tr>
   </tbody></table>
 </div></section>
 
@@ -780,10 +948,10 @@ prd.md를 설계 기준으로 삼고, 기능을 바꾸면 prd.md와 README.md도
   <p class="lead">심화과정을 마치며 내 수업에 어떻게 쓸지 정리합니다. 완성된 글을 복사해 갤러리나 제출 양식에 붙여 넣으세요.</p>
   <div class="two">
     <form class="fields" onsubmit="return false">
-      <div><label class="f" for="apUnit">학교급·과목·단원</label><input type="text" id="apUnit" placeholder="예: 고1 통합사회 인권 보장과 헌법"></div>
+      <div><label class="f" for="apUnit">학교급·과목·단원</label><input type="text" id="apUnit" placeholder="예: 중학교 정보 알고리즘과 프로그래밍 (4차시)"></div>
       <div><label class="f" for="apScene">활용 장면</label><select id="apScene"><option>도입: 사전 지식 확인</option><option selected>전개: 개념 연습과 즉시 피드백</option><option>정리: 형성평가와 오답 확인</option><option>과제: 수업 밖 자기주도 연습</option></select></div>
-      <div><label class="f" for="apAct">학생 활동</label><input type="text" id="apAct" placeholder="예: QR로 접속해 퀴즈 풀이 후 생각 나눔판에 의견 남기기"></div>
-      <div><label class="f" for="apData">수집·활용할 데이터</label><input type="text" id="apData" placeholder="예: 문항별 정답률, 이해도 신호등, 서술형 답과 AI 피드백"></div>
+      <div><label class="f" for="apAct">학생 활동</label><input type="text" id="apAct" placeholder="예: 태블릿으로 차시 학습 → 단원 마무리 서술형 → 질문 보드에 질문 남기기"></div>
+      <div><label class="f" for="apData">수집·활용할 데이터</label><input type="text" id="apData" placeholder="예: 차시별 이해도·점수(시트), 수업 중 학급 진도판, 서술형 AI 피드백"></div>
       <div><label class="f" for="apCare">유의점</label><input type="text" id="apCare" placeholder="예: 닉네임만 사용, AI 피드백은 교사가 검토 후 활용"></div>
       <div><label class="f" for="apUrl">앱 주소</label><input type="url" id="apUrl" placeholder="https://….vercel.app"></div>
     </form>
@@ -805,6 +973,18 @@ const save=()=>{try{localStorage.setItem("vc-basic",JSON.stringify(store))}catch
 
 /* ---------- steps ---------- */
 const STEPS={
+s0:[
+ ["Google 계정 확인",["개인 Gmail로 gemini.google.com, aistudio.google.com 로그인","학교 계정이 막혀 있으면 개인 계정 사용"],"","#s0-acc"],
+ ["GitHub 가입·이메일 인증",["github.com/signup에서 가입, 메일로 온 코드 입력","사용자명은 영문 소문자·하이픈으로 짧게"],"","#s0-name"],
+ ["GitHub 2단계 인증",["인증 앱으로 QR 등록 → 6자리 코드 입력","복구 코드를 내려받아 안전한 곳에 보관"],"휴대폰을 바꾸면 복구 코드로만 로그인할 수 있습니다.","#s0-acc"],
+ ["이메일 비공개 설정",["Settings → Emails → Keep my email addresses private","noreply 주소 복사해 두기"],"","#s0-acc"],
+ ["Vercel 가입",["Hobby 선택 → Continue with GitHub","저장소 권한: All repositories"],"","#s0-acc"],
+ ["저장소·Pages 규칙 읽어 두기",["Public, index.html, 개인정보·키 올리지 않기"],"여기까지가 기본과정 준비입니다.","#s0-repo"],
+ ["(심화) 프로그램 설치",["Chrome · Git · Node.js(LTS) · Antigravity 설치","git --version, node -v로 확인"],"","#s0-pc"],
+ ["(심화) Git 이름·이메일 설정",["아래 도구로 명령을 만들어 터미널에 붙여 넣기"],"","#s0-git"],
+ ["(심화) Supabase 가입",["Continue with GitHub → 조직 이름 정하기 (Free)"],"","#s0-acc"],
+ ["(심화) 학교 네트워크 확인",["학교 와이파이에서 github.com · vercel.com · supabase.com 접속 확인"],"","#s0-pc"]
+],
 s1:[
  ["캔버스 열기",["<b>Gemini</b>: gemini.google.com → 입력창의 도구에서 '캔버스' 선택","<b>ChatGPT</b>: chatgpt.com → 입력창 '+' 메뉴에서 '캔버스' 선택"],"학교 Workspace 계정이 막혀 있으면 개인 계정으로 로그인하세요."],
  ["실습 ① 3줄로 퀴즈 앱 무작정 만들기",["아래 빌더에서 학년·과목·단원을 골라 3줄 프롬프트 복사","캔버스에 붙여 넣고 미리보기로 풀어 보기(수정은 1~2번만)"],"캔버스 대화창은 닫지 마세요. 실습 ②에서 이어서 씁니다.","#s1-build"],
@@ -813,7 +993,7 @@ s1:[
  ["실습 ③ 시뮬레이터 설계도 인터뷰",["주제를 고르고 인터뷰 프롬프트를 새 일반 대화창에 붙여 넣기","AI 질문에 답하고 '빠지거나 모호한 부분' 점검 요청","sim-app 폴더를 만들고 최종본을 prd.md로 저장"],"업무 도구를 고르면 갈래 ② 프롬프트로, 저장 폴더는 work-app입니다.","#s1-prd"],
  ["실습 ④ 설계도로 시뮬레이터 만들기",["새 캔버스에 PRD 기반 프롬프트 + sim-app 폴더의 prd.md 내용 붙여 넣기","탐구 과제를 학생처럼 직접 해 보기"],"","#s1-sim"],
  ["한 번에 하나씩 다듬기",["3번 이상 수정 요청","오류는 '증상 + 기대 결과'로 설명"],"","#s1-fix"],
- ["원리와 휴대폰 화면 점검",["원리 영역의 공식·단위·수치 검토","휴대폰 크기에서 슬라이더·버튼이 잘 눌리는지 확인"]],
+ ["원리와 화면 점검",["원리 영역의 공식·단위·수치 검토","태블릿 가로·노트북 크기에서 슬라이더·버튼이 잘 눌리는지 확인"]],
  ["앱마다 폴더에 index.html 저장",["퀴즈 코드 → quiz-app/index.html","시뮬레이터 코드 → sim-app/index.html"],"두 앱 모두 이름이 index.html이라 폴더를 꼭 나눕니다.","#s1-save"],
  ["저장한 파일 열어 보기",["두 폴더의 index.html을 더블클릭해 브라우저에서 열리는지 확인"],"2차시 준비: GitHub 가입과 2단계 인증을 미리 해 오세요."]
 ],
@@ -828,7 +1008,7 @@ s2:[
  ["README 안내문 만들기",["1차시에 그 앱을 만든 대화를 다시 열고 README 프롬프트 보내기","저장소 Add file → Create new file → 이름 README.md → 붙여 넣기 → Preview 확인 → Commit"],"README가 있어도 Pages 주소에서는 index.html이 열립니다.","#s2-readme"],
  ["고치고 다시 올리기",["캔버스에서 하나 고침 → index.html로 다시 저장","같은 이름으로 Upload files(덮어쓰기) → 커밋 메시지 작성"],"","#s2-commit"],
  ["기록 보고 되돌려 보기",["index.html → History → 이전 커밋 선택","그때 내용을 복사해 index.html로 저장 후 다시 올리기"]],
- ["QR 코드로 휴대폰 접속",["아래 QR 도구에 주소 붙여 넣기","옆 선생님 휴대폰으로 찍어 학생 입장에서 풀어 보기"],"","#s2-qr"],
+ ["태블릿·노트북으로 접속",["아래 QR 도구에 주소 붙여 넣기","옆 선생님 태블릿으로 찍거나 노트북에 주소를 입력해 학생 입장에서 풀어 보기"],"","#s2-qr"],
  ["공개 저장소 원칙 확인",["학생 정보·비밀번호·API 키를 파일에 넣지 않기"],"3차시 준비: Vercel에 'Continue with GitHub'로 가입해 오세요."]
 ],
 s3:[
@@ -839,23 +1019,23 @@ s3:[
  ["GitHub로 저장",["오른쪽 위 GitHub 아이콘 → 처음이면 권한 승인","새 저장소 이름(예: science-quiz-v2)으로 만들고 올리기"],"권한 창이 안 뜨면 브라우저 팝업 차단을 해제하세요."],
  ["Vercel에서 프로젝트 만들기",["vercel.com → Continue with GitHub 로그인","Add New → Project → 저장소 Import"],"저장소가 안 보이면 Adjust GitHub App Permissions에서 접근 허용."],
  ["설정 확인 후 Deploy",["Framework Preset이 <b>Vite</b>인지 확인","Project Name(주소 앞부분) 정하기 → Deploy"],"오늘은 Environment Variables를 비워 둡니다."],
- ["주소 열고 QR 만들기",["완료 화면 또는 Domains에서 vercel.app 주소 확인","휴대폰으로 열어 보기"],"","#s3-qr"],
+ ["주소 열고 QR 만들기",["완료 화면 또는 Domains에서 vercel.app 주소 확인","태블릿·노트북으로 열어 보기"],"","#s3-qr"],
  ["자동 재배포 확인",["AI Studio에서 제목 한 글자 고치기 → GitHub에 올리기","Vercel Deployments에 새 배포가 생기고 같은 주소에 반영되는지 확인"]],
  ["오류가 나면 도우미 사용",["실패한 배포의 Build Logs 빨간 줄 복사","아래 도우미로 문장을 만들어 AI Studio에 요청"],"","#s3-err"],
  ["갤러리에 공유",["아래에서 공유 글을 만들어 패들렛 등에 올리기","서로의 앱을 학생 입장에서 풀어 보기"],"심화 준비: 4차시 전에 Antigravity와 Git을 개인 노트북에 설치해 오세요.","#s3-share"]
 ],
 s4:[
- ["Antigravity 실행, 남은 사용량 확인",["개인 Gmail로 로그인되어 있는지 확인","설정에서 남은 사용량 확인 — 부족하면 모델을 바꿔 둠"],"처음 쓰는 계정인데도 한도 메시지가 뜨는 경우가 있습니다."],
+ ["Antigravity 실행, 남은 사용량 확인",["개인 Gmail로 로그인되어 있는지 확인","설정에서 남은 사용량 확인 — 부족하면 모델을 바꿔 둠"],"Git·Node.js가 설치되어 있어야 합니다."],
  ["안전 설정을 '검토 요청'으로",["터미널 명령 실행: 검토 요청","계획 검토: 매번 검토","브라우저 JavaScript: 검토 요청"]],
- ["연수용 폴더 열기",["바탕화면 등에 새 폴더를 만들고 Antigravity에서 열기"],"다른 개인 파일이 있는 폴더는 열지 않습니다."],
- ["3차시 저장소 가져오기",["아래 도구로 문장을 만들어 에이전트에게 보내기","명령 승인 화면을 읽고 승인 → 브라우저에서 앱이 열리면 성공"],"Git이 없다는 안내가 나오면 Git을 설치한 뒤 다시 요청합니다.","#s4-clone"],
- ["규칙(Rules) 붙여 넣기",["에이전트 설정의 규칙에 약속 5줄 붙여 넣기"],"","#s4-rules"],
- ["상호작용 기능 요청 (Planning)",["기능 하나를 골라 프롬프트 만들기","모드를 Planning으로 두고 보내기"],"","#s4-build"],
- ["계획서 확인하고 댓글 달기",["무엇을 바꾸나 · 무엇이 생기나 · 학생 정보를 받나","고칠 점은 댓글로 → 계획이 바뀌면 승인"],"","#s4-plan"],
- ["브라우저 검증과 결과 보고 읽기",["에이전트가 브라우저에서 눌러 보는 과정 확인","결과 보고를 읽고 직접 한 번 더 풀어 보기"]],
- ["작은 수정은 Fast 모드로",["글자·색·크기 수정 한 번을 Fast로 해 보기"],"","#s4-fast"],
- ["제출 데이터 묶음 만들어 두기",["5차시에 보낼 항목을 하나의 묶음으로 만들고 콘솔에서 확인"],"","#s4-data"],
- ["푸시하고 자동 재배포 확인",["에이전트에게 커밋·푸시 요청 → GitHub 로그인 승인","Vercel Deployments와 같은 주소에서 새 기능 확인, 옆 선생님과 서로 체험"],"5차시 준비: AI Studio에서 API 키 메뉴가 보이는지 확인해 오세요.","#s4-push"]
+ ["unit-app 폴더 열고 규칙 넣기",["바탕화면에 빈 폴더를 만들고 Antigravity에서 열기","규칙(Rules)에 약속 붙여 넣기"],"다른 개인 파일이 있는 폴더는 열지 않습니다.","#s4-rules"],
+ ["/grill-me로 단원 설계 인터뷰",["입력창에 / → grill-me 고르고 단원 브리프 붙여 넣기","질문마다 번호를 고르거나 직접 입력해 답하기"],"예시 단원으로 해도 됩니다. 탐구 활동 하나는 내 교과로 바꿔 보세요.","#s4-unit"],
+ ["합의 후 prd.md 저장·점검",["요약을 확인하고 저장 문장 보내기","에디터에서 prd.md 열어 활동·단계·기준 점검"],"","#s4-unit"],
+ ["1단계 뼈대 (Planning)",["단계별 프롬프트에서 1단계 선택 → 보내기","계획서 세 가지 확인 → 승인"],"","#s4-build"],
+ ["화면 크기로 직접 확인",["1024×768, 1366×768에서 단원 지도와 차시 화면 확인","휴대폰 크기에서 안내 화면 확인"],"","#s4-device"],
+ ["2단계 차시 학습 흐름",["학습 목표 → 개념 카드 → 형성평가 → 이해도 → 성찰이 이어지는지","내 학습 기록에 결과가 남는지 확인"],"","#s4-build"],
+ ["작은 수정은 Fast 모드로",["글자·색·간격 수정 한 번을 Fast로 해 보기"],"","#s4-fast"],
+ ["GitHub에 올리고 Vercel로 배포",["빈 저장소를 만들고 에이전트에게 푸시 요청","Vercel에서 Import → Deploy → 태블릿·노트북에서 열어 보기"],"5차시 준비: AI Studio에서 API 키 메뉴가 보이는지 확인해 오세요.","#s4-push"],
+ ["도전: 3·4단계",["차시 하나씩 탐구 활동 만들기","단원 마무리와 오답 다시 풀기"],"","#s4-build"]
 ],
 s5:[
  ["구글 시트 만들기",["새 구글 시트를 만들고 이름 정하기(예: 2-3 형성평가 결과)"],"개인 Google 계정을 권장합니다."],
@@ -864,10 +1044,10 @@ s5:[
  ["API 키를 스크립트 속성에 넣기",["AI Studio에서 API 키 발급","프로젝트 설정 → 스크립트 속성에 GEMINI_API_KEY 추가"],"키는 앱 코드·저장소·대화창에 절대 붙여 넣지 않습니다.","#s5-key"],
  ["testSetup 실행해 권한 승인",["위쪽 함수 선택에서 testSetup → 실행","권한 검토 → 고급 → 이동 → 허용","실행 로그에 AI 피드백 문장이 보이면 성공, 시트에 '결과' 탭이 생김"]],
  ["웹 앱으로 배포",["배포 → 새 배포 → 웹 앱","실행: 나 / 액세스: 모든 사용자 → 배포 → /exec URL 복사","URL을 브라우저에서 열어 '연결 성공' 확인"],"","#s5-deploy"],
- ["앱에 결과 전송 기능 추가",["아래 도구에 웹 앱 URL을 넣어 프롬프트 만들기","Antigravity에서 Planning으로 요청 → 계획 확인 → 승인"],"","#s5-front"],
- ["서술형 문항과 AI 피드백 확인",["앱에서 퀴즈를 끝까지 풀고 서술형 답 제출","화면에 피드백이 나오고 시트에 한 줄이 쌓이는지 확인"]],
- ["시트에서 결과 살펴보기",["문항별 결과 열로 오답이 많은 문항 찾기","AI 피드백이 채점 기준에 맞는지 교사가 검토"],"AI 피드백은 학습 보조용입니다. 점수 판정은 교사가 합니다."],
- ["푸시하고 자동 재배포",["에이전트에게 커밋·푸시 요청 → vercel.app 주소에서 휴대폰으로 제출해 보기"],"6차시 준비: supabase.com에 GitHub 계정으로 가입해 오세요."]
+ ["단원 앱에 결과 전송 기능 추가",["아래 도구에 웹 앱 URL을 넣어 프롬프트 만들기","Antigravity에서 Planning으로 요청 → 계획 확인 → 승인"],"","#s5-front"],
+ ["차시 제출과 AI 피드백 확인",["1차시를 끝까지 학습해 시트에 한 줄이 쌓이는지 확인","단원 마무리 서술형을 제출해 피드백이 화면과 시트에 나오는지 확인"]],
+ ["시트에서 단원 결과 살펴보기",["차시 열로 걸러 이해도가 낮은 차시 찾기","AI 피드백이 채점 기준에 맞는지 교사가 검토"],"AI 피드백은 학습 보조용입니다. 점수 판정은 교사가 합니다."],
+ ["푸시하고 자동 재배포",["에이전트에게 커밋·푸시 요청 → vercel.app 주소를 태블릿·노트북으로 열어 한 차시 제출해 보기"],"6차시 준비: supabase.com에 GitHub 계정으로 가입해 오세요."]
 ],
 s6:[
  ["Supabase 가입과 프로젝트 만들기",["supabase.com → Continue with GitHub","New project → 이름, 데이터베이스 비밀번호(따로 보관), 지역 Seoul 선택"],"프로젝트 준비에 몇 분 걸리므로 가장 먼저 시작하세요."],
@@ -875,9 +1055,9 @@ s6:[
  ["접속 정보 복사",["Project Settings → API Keys","Project URL과 Publishable key를 아래 도구에 넣어 .env 내용 만들기"],"Secret key는 절대 쓰지 않습니다.","#s6-env"],
  [".env 파일 만들기",["에이전트에게 \".env 파일을 만들고 아래 내용을 넣어줘. .env는 .gitignore에 추가해줘\" 요청"],"키를 대화창에 붙이는 대신, 직접 .env 파일을 열어 붙여 넣어도 됩니다."],
  ["연동 기능 요청 (Planning)",["아래 도구로 프롬프트 만들기 → 계획 확인 → 승인"],"","#s6-front"],
- ["내 컴퓨터에서 실시간 확인",["브라우저 창 두 개를 열고 한쪽에서 쓴 글이 다른 쪽에 바로 나타나는지 확인"]],
+ ["내 컴퓨터에서 실시간 확인",["학생 화면과 교사 화면(/teacher?room=학급코드)을 창 두 개로 나란히 열기","학생 창에서 차시를 마치면 교사 창이 바로 바뀌는지 확인"]],
  ["Vercel에 환경변수 등록하고 다시 배포",["Settings → Environment Variables에 두 값 추가","커밋·푸시 또는 Redeploy"],"","#s6-vercel"],
- ["전원 동시 접속 테스트",["연수생 모두가 학생 역할로 QR 접속해 동시에 글쓰기·점수 올리기"],"막히면 아래 '막힐 때'를 보세요.","#s6-trouble"],
+ ["전원 동시 접속 테스트",["연수생 모두가 학생 역할로 태블릿·노트북에서 접속해 차시 학습·질문 남기기","강사는 교사 화면에서 실시간 반영 확인"],"막히면 아래 '막힐 때'를 보세요.","#s6-trouble"],
  ["갤러리 워크",["앱 주소와 QR을 게시하고 서로의 앱을 체험하며 댓글 남기기"]],
  ["수업 적용 계획 작성",["아래 양식으로 내 수업 적용 계획 1쪽 완성"],"무료 플랜은 오래 안 쓰면 일시정지되므로 수업 전날 대시보드를 확인하세요.","#s6-plan"]
 ]};
@@ -896,7 +1076,7 @@ let advOpen=false;try{advOpen=localStorage.getItem(LOCK_KEY)==="1"}catch(e){}
 const pinHash=t=>{let x=5381;for(const c of "vc-lock:"+t)x=((x*33)^c.charCodeAt(0))>>>0;return x};
 function lockMarks(){$$(".tabs-top a.adv").forEach(a=>a.classList.toggle("locked",!advOpen))}
 function route(){
-  const h=(location.hash||"#s1").slice(1);const tab=(h.match(/^s[1-6]/)||["s1"])[0];
+  const h=(location.hash||"#s1").slice(1);const tab=(h.match(/^s[0-6]/)||["s1"])[0];
   const blocked=LOCKED_TABS.includes(tab)&&!advOpen;
   $$(".panel").forEach(p=>p.hidden=blocked?p.id!=="p-lock":p.id!=="p-"+tab);
   if(blocked){$("#lockTitle").textContent=`${tab.slice(1)}차시는 암호를 넣어야 열립니다`;$("#lockErr").textContent="";$("#lockPin").value="";}
@@ -916,6 +1096,16 @@ function showToast(m){toast.textContent=m;toast.classList.add("on");clearTimeout
 async function copy(t){try{await navigator.clipboard.writeText(t);showToast("복사했습니다")}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();let ok=false;try{ok=document.execCommand("copy")}catch(_){}a.remove();showToast(ok?"복사했습니다":"복사가 막혔어요. 글자를 드래그해 복사하세요")}}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-copy]");if(b)copy($(b.dataset.copy).textContent);const c=e.target.closest("[data-text]");if(c)copy(c.dataset.text)});
 
+/* ---------- 0차시 ---------- */
+function gh(){const u=$("#ghUser").value.trim(),r=$("#ghRepo").value.trim()||"quiz-app";const lu=u.toLowerCase();
+  $("#ghAddr").textContent=`https://${lu||"사용자명"}.github.io/${r}/`;
+  const bad=u&&!/^[a-zA-Z0-9](?:[a-zA-Z0-9]|-(?=[a-zA-Z0-9])){0,38}$/.test(u);
+  $("#ghWarn").textContent=bad?"사용자명은 영문·숫자·하이픈만 쓸 수 있고, 하이픈으로 시작·끝나거나 연달아 쓸 수 없습니다.":(u!==lu?"주소에서는 소문자로 바뀝니다. 처음부터 소문자로 정하는 것을 권장합니다.":"")}
+$$("#ghUser,#ghRepo").forEach(e=>e.addEventListener("input",gh));gh();
+function gc(){const n=($("#gcName").value.trim()||"내이름").replace(/"/g,""),m=($("#gcMail").value.trim()||"12345678+아이디@users.noreply.github.com").replace(/"/g,"");
+  $("#gcOut").textContent=`git config --global user.name "${n}"\ngit config --global user.email "${m}"\ngit config --global init.defaultBranch main\ngit config --global --list`}
+$$("#gcName,#gcMail").forEach(e=>e.addEventListener("input",gc));gc();
+
 /* ---------- 1차시: builder ---------- */
 const SUB={"중":{"과학":"물질의 상태 변화","국어":"품사의 종류","수학":"일차함수와 그래프","사회":"기후와 생활","영어":"현재완료 시제","역사":"고려의 성립과 변천","도덕":"도덕적 추론","기술·가정":"청소년기의 영양과 식사","정보":"자료와 정보의 구분","음악":"음악의 셈여림 기호","미술":"색의 3요소","체육":"운동과 건강 체력"},
 "고":{"통합사회":"인권 보장과 헌법","통합과학":"화학 결합과 물질의 성질","공통국어":"매체 자료의 표현 방법","공통수학":"다항식의 연산","공통영어":"관계대명사","한국사":"고려의 성립과 변천","정보":"알고리즘의 효율성","생명과학":"세포의 구조와 기능","물리학":"뉴턴 운동 법칙","경제":"수요와 공급","기술·가정":"생애 주기와 건강한 식생활","체육":"건강 체력과 운동 처방"}};
@@ -924,18 +1114,18 @@ const sel=$("#subj");let subjects=SUB["중"],unitTouched=false;
 $("#feat").innerHTML=feats.map((f,i)=>`<label class="chip"><input type="checkbox" data-i="${i}" ${f[2]?"checked":""}>${f[0]}</label>`).join("");
 function fillSub(){const lv=$("#grade").value.startsWith("고")?"고":"중";const prev=sel.value;subjects=SUB[lv];sel.innerHTML=Object.keys(subjects).map(k=>`<option>${k}</option>`).join("");if(subjects[prev])sel.value=prev;if(!unitTouched||!subjects[prev])$("#unit").value=subjects[sel.value]}
 function b1(){const fs=$$("#feat input:checked").map(c=>feats[c.dataset.i][1]);const unit=$("#unit").value.trim()||"(단원)";
-  $("#p1").textContent=`${$("#grade").value} ${sel.value} '${unit}' 형성평가 퀴즈 웹앱을 만들어줘.\n${$("#qtype").value} ${$("#num").value}문항으로 만들고, ${fs.length?fs.join(", ")+".":"한 문항씩 차례로 보여줘."}\n하나의 HTML 파일로 만들고, 학생 휴대폰에서도 잘 보이게 ${$("#mood").value} 분위기로 디자인해줘.`}
+  $("#p1").textContent=`${$("#grade").value} ${sel.value} '${unit}' 형성평가 퀴즈 웹앱을 만들어줘.\n${$("#qtype").value} ${$("#num").value}문항으로 만들고, ${fs.length?fs.join(", ")+".":"한 문항씩 차례로 보여줘."}\n하나의 HTML 파일로 만들고, 태블릿·노트북 화면(가로 1024px 이상)에서 잘 보이게, ${$("#mood").value} 분위기로 디자인해줘.`}
 fillSub();b1();
 $("#grade").addEventListener("change",()=>{fillSub();b1()});
 sel.addEventListener("change",()=>{if(!unitTouched)$("#unit").value=subjects[sel.value];b1()});
 $("#unit").addEventListener("input",()=>{unitTouched=true;b1()});
 $$("#num,#qtype,#mood,#feat input").forEach(e=>e.addEventListener("change",b1));
 
-const ex=[["중 · 국어","중학교 1학년 국어 '품사의 종류' 퀴즈 웹앱을 만들어줘. 문장 속 밑줄 친 단어의 품사를 고르는 객관식 5문항이고, 답을 고르면 해설을 보여줘. 하나의 HTML 파일로, 휴대폰에서도 잘 보이게 해줘."],
+const ex=[["중 · 국어","중학교 1학년 국어 '품사의 종류' 퀴즈 웹앱을 만들어줘. 문장 속 밑줄 친 단어의 품사를 고르는 객관식 5문항이고, 답을 고르면 해설을 보여줘. 하나의 HTML 파일로, 태블릿·노트북 화면(가로 1024px 이상)에서 잘 보이게 해줘."],
 ["중 · 수학","중학교 2학년 수학 '일차함수의 기울기' 연습 웹앱을 만들어줘. 두 점의 좌표를 보여주고 기울기를 입력하면 정답 여부와 풀이를 보여줘. 문제는 매번 새로 만들어지게 하고, 하나의 HTML 파일로 만들어줘."],
 ["중 · 과학","중학교 2학년 과학 '물질의 상태 변화' 퀴즈 웹앱을 만들어줘. 생활 속 현상을 보고 융해·응고·기화·액화·승화 중 고르는 5문항이고, 답을 고르면 해설을 보여줘. 하나의 HTML 파일로 만들어줘."],
 ["중 · 영어","중학교 2학년 영어 '현재완료' 빈칸 퀴즈 웹앱을 만들어줘. 문장의 빈칸에 알맞은 형태를 고르는 객관식 5문항이고, 답을 고르면 한국어 해설을 보여줘. 하나의 HTML 파일로 만들어줘."],
-["고 · 통합사회","고등학교 1학년 통합사회 '인권 보장과 헌법' 퀴즈 웹앱을 만들어줘. 생활 속 사례를 읽고 관련된 기본권을 고르는 객관식 5문항이고, 답을 고르면 해설을 보여줘. 하나의 HTML 파일로, 휴대폰에서도 잘 보이게 해줘."],
+["고 · 통합사회","고등학교 1학년 통합사회 '인권 보장과 헌법' 퀴즈 웹앱을 만들어줘. 생활 속 사례를 읽고 관련된 기본권을 고르는 객관식 5문항이고, 답을 고르면 해설을 보여줘. 하나의 HTML 파일로, 태블릿·노트북 화면(가로 1024px 이상)에서 잘 보이게 해줘."],
 ["고 · 공통수학","고등학교 1학년 공통수학 '다항식의 나눗셈' 연습 웹앱을 만들어줘. 문제를 무작위로 만들고, 몫과 나머지를 입력하면 정답 여부와 풀이 과정을 보여줘. 하나의 HTML 파일로 만들어줘."],
 ["고 · 한국사","고등학교 1학년 한국사 '고려의 성립과 변천' 순서 맞히기 웹앱을 만들어줘. 사건 카드 5장을 버튼으로 시대 순서대로 배열하면 정답 여부와 해설을 보여줘. 하나의 HTML 파일로 만들어줘."],
 ["고 · 정보","고등학교 정보 '알고리즘의 효율성' 퀴즈 웹앱을 만들어줘. 짧은 의사코드를 보여주고 반복 횟수를 고르는 객관식 5문항이고, 마지막에 점수와 다시 풀기 버튼을 보여줘. 하나의 HTML 파일로 만들어줘."]];
@@ -944,7 +1134,7 @@ $("#exGrid").innerHTML=ex.map(e=>`<div class="card"><h3>${e[0]}</h3><p>${e[1]}</
 const fix={"기능 추가":["마지막 화면에 '다시 풀기' 버튼을 추가해줘.","위쪽에 '3 / 5'처럼 몇 번째 문항인지 보여줘.","정답을 맞히면 화면에 짧은 칭찬 문구가 나타나게 해줘.","틀린 문항만 모아서 다시 풀 수 있는 버튼을 추가해줘.","문항마다 '힌트 보기' 버튼을 넣고, 누르면 힌트가 나타나게 해줘."],
 "디자인":["글자를 지금보다 한 단계 크게 해줘.","보기 버튼을 손가락으로 누르기 쉽게 더 크게 만들어줘.","전체 색을 하늘색 계열로 바꿔줘. 기능은 그대로 둬.","정답은 초록색, 오답은 빨간색으로 표시해줘.","제목 아래에 '○학년 ○반 형성평가'라는 부제목을 넣어줘."],
 "내용 수정":["3번 문항의 보기를 이렇게 바꿔줘: (보기를 붙여 넣기)","해설을 우리 학생 수준에 맞게 쉬운 말로 한 문장씩 줄여줘.","문항을 2개 더 추가해줘. 기존 문항과 겹치지 않게 해줘.","모든 문항의 정답이 맞는지 다시 검토하고, 틀린 것이 있으면 알려줘.","방금 바꾼 것을 되돌려줘."],
-"휴대폰 화면":["휴대폰 세로 화면에서 글자가 잘리지 않게 고쳐줘.","휴대폰에서 좌우로 스크롤이 생기지 않게 해줘.","화면 아래쪽 버튼이 휴대폰에서 가려지지 않게 해줘."]};
+"태블릿·노트북 화면":["태블릿 가로(1024×768)에서 스크롤 없이 한 화면에 들어오게 고쳐줘.","버튼을 손가락으로 누르기 쉽게 더 크게 해줘.","큰 모니터에서 내용이 너무 늘어나지 않게 가운데로 모아줘."]};
 let cur="기능 추가";
 function rFix(){$("#fixTabs").innerHTML=Object.keys(fix).map(k=>`<button type="button" aria-pressed="${k===cur}" data-t="${k}">${k}</button>`).join("");$("#fixList").innerHTML=fix[cur].map(s=>`<li><span>${s}</span><button type="button" class="ghost sm" data-text="${esc(s)}">복사</button></li>`).join("")}
 $("#fixTabs").addEventListener("click",e=>{const b=e.target.closest("[data-t]");if(b){cur=b.dataset.t;rFix()}});rFix();
@@ -984,7 +1174,7 @@ const PRD_TPL=`# (앱 이름) PRD
 - 개인정보: 이름·학번·연락처는 받지 않음
 
 ## 7. 디자인
-- 분위기, 글자 크기, 휴대폰 우선
+- 분위기, 글자 크기, 태블릿 가로(1024×768) 이상·노트북·PC 기준
 
 ## 8. 기술 조건
 - 1단계: 하나의 HTML 파일
@@ -1107,7 +1297,7 @@ function rmB(){const nm=$("#rmName").value.trim();const o=$$("#rmOpt input:check
 포함할 것: 한 줄 소개${o.length?", "+o.join(", "):""}, 만든 사람
 만든 사람: ${nm||"(이름 또는 별칭)"}`}
 $("#rmName").addEventListener("input",rmB);$$("#rmOpt input").forEach(e=>e.addEventListener("change",rmB));rmB();
-const commits=["퀴즈 앱 첫 업로드","3번 문항 해설 수정","보기 버튼 크기 키움(휴대폰용)","다시 풀기 버튼 추가","2학년 3반 수업 전 최종본","이전 버전으로 되돌림"];
+const commits=["퀴즈 앱 첫 업로드","3번 문항 해설 수정","보기 버튼 크기 키움(태블릿 터치용)","다시 풀기 버튼 추가","2학년 3반 수업 전 최종본","이전 버전으로 되돌림"];
 $("#commitList").innerHTML=commits.map(c=>`<li><span>${c}</span><button type="button" class="ghost sm" data-text="${esc(c)}">복사</button></li>`).join("");
 
 /* ---------- QR ---------- */
@@ -1126,7 +1316,7 @@ function b3(){const mode=document.querySelector('input[name=mode3]:checked').val
   if(mode==="prd"){const nx=$("#prdNext").value.trim();
     $("#p3").textContent=`${head}\n첨부한 prd.md가 이 앱의 설계도야. '핵심 기능'의 필수 항목과 '화면 구성'을 먼저 구현해줘.\n'있으면 좋은 기능'은 아직 만들지 말고, 다 만든 뒤 다음 단계로 제안만 해줘.\n첨부한 index.html의 내용(문항·원리)은 그대로 가져와줘.\n첨부한 설계도와 README.md도 프로젝트 맨 위 폴더에 넣고, 구현과 다르게 판단한 부분은 prd.md에 반영해줘.${nx?`\n\n(배포 후 보낼 요청) PRD의 '있으면 좋은 기능' 중 '${nx}'을(를) 구현하고 prd.md도 갱신해줘.`:""}`;return}
   const base=document.querySelector('input[name=base]:checked').value;const fs=$$("#upFeat input:checked").map(c=>up[c.dataset.u][1]);
-  $("#p3").textContent=`${head}\n${base==="att"?"첨부한 index.html 퀴즈를":"아래에 붙여 넣은 퀴즈 코드를"} 기반으로 만들어줘.\n${fs.length?"아래 내용을 반영해줘.\n"+fs.map(x=>"- "+x).join("\n"):"기존 기능을 유지하면서 코드를 깔끔한 구조로 정리해줘."}\n학생 휴대폰에서 잘 보이게, ${$("#upStyle").value} 디자인으로 만들어줘.${base==="paste"?"\n\n(여기에 1차시 index.html 코드를 붙여 넣기)":""}`}
+  $("#p3").textContent=`${head}\n${base==="att"?"첨부한 index.html 퀴즈를":"아래에 붙여 넣은 퀴즈 코드를"} 기반으로 만들어줘.\n${fs.length?"아래 내용을 반영해줘.\n"+fs.map(x=>"- "+x).join("\n"):"기존 기능을 유지하면서 코드를 깔끔한 구조로 정리해줘."}\n태블릿·노트북 화면(가로 1024px 이상)에서 잘 보이게, ${$("#upStyle").value} 디자인으로 만들어줘.${base==="paste"?"\n\n(여기에 1차시 index.html 코드를 붙여 넣기)":""}`}
 $$("#upFeat input,#upStyle,input[name=base],input[name=mode3]").forEach(e=>e.addEventListener("change",b3));$("#prdNext").addEventListener("input",b3);b3();
 
 const sit=[["빌드 실패","Vercel › Deployments에서 실패(Error)한 배포 → Build Logs의 빨간 줄을 복사해 아래에 붙여 넣으세요.","Vercel에 배포했더니 빌드가 실패했어. 아래 오류를 보고, 서버 없이 Vercel에서 정적 사이트로 배포되도록 고쳐줘. 다른 기능은 그대로 둬."],
@@ -1144,22 +1334,108 @@ function sB(){const n=$("#shName").value.trim(),s=$("#shSubj").value.trim(),u=$(
   $("#shOut").textContent=`[${s||"교과·단원"}] ${o||"한 줄 소개"}\n${u||"앱 주소"}\n만든 사람: ${n||"이름 또는 별칭"} · 바이브코딩 기본과정 1~3차시 결과물`}
 $$("#shName,#shSubj,#shUrl,#shOne").forEach(e=>e.addEventListener("input",sB));sB();
 /* ---------- 4차시 ---------- */
-function cl(){const u=$("#cloneUrl").value.trim()||"(저장소 주소)";$("#cloneOut").textContent=`이 GitHub 저장소를 지금 열린 폴더에 내려받고(clone), 필요한 패키지를 설치한 뒤 개발 서버를 실행해서 브라우저로 보여줘. 실행할 명령은 먼저 보여주고 내 승인을 받아.\n${u}`}
-$("#cloneUrl").addEventListener("input",cl);cl();
-const IT=[["단계별 힌트","각 문항에 '힌트 보기' 버튼을 추가해줘. 누를 때마다 힌트가 1단계, 2단계로 하나씩 열리고, 힌트를 쓴 횟수를 결과 화면에 보여줘."],
-["오답 다시 풀기","결과 화면에 '오답 다시 풀기' 버튼을 추가해줘. 누르면 틀린 문항만 다시 풀고, 모두 맞힐 때까지 반복할 수 있게 해줘."],
-["이해도 신호등","각 문항을 푼 뒤 '알겠다·헷갈린다·모르겠다' 신호등 버튼으로 학생이 스스로 이해도를 표시하게 하고, 결과 화면에 신호등별 개수를 보여줘."],
-["도전 모드","시작 화면에 '도전 모드'를 추가해줘. 문항마다 제한 시간 20초가 있고, 연속으로 3문항을 맞히면 배지를 보여줘."]];
-const IO=[["브라우저 확인","완료 후 브라우저에서 직접 문항 3개를 풀어 보며 확인해줘.",1],["다른 화면 유지","다른 화면과 기존 기능은 그대로 둬.",1],["개인정보 금지","학생 이름은 입력받지 마.",1],["휴대폰 확인","휴대폰 크기 화면에서도 버튼이 잘 눌리는지 확인해줘.",0]];
-$("#itype").innerHTML=IT.map((t,i)=>`<label class="chip"><input type="radio" name="itype" value="${i}" ${i===2?"checked":""}>${t[0]}</label>`).join("");
+const UNIT_TPL=`# (앱 이름) prd.md
+
+## 1. 앱 이름과 한 줄 소개
+-
+
+## 2. 대상과 사용 장면
+- 대상: (학교급·학년)
+- 사용 장면: (수업 중 / 과제), 학생 1인 1기기(태블릿·노트북)
+
+## 3. 단원과 성취기준
+- 단원:
+- 성취기준:
+
+## 4. 차시 구성
+| 차시 | 주제 | 학습 목표 |
+|---|---|---|
+
+## 5. 차시별 탐구 활동
+- (차시) 활동 이름: 학생이 화면에서 하는 조작 / 알게 되는 것
+
+## 6. 형성평가
+- 차시마다 3~5문항(객관식·OX·짧은 답), 정답 해설 포함
+- 단원 마무리: 종합 문항 + 서술형 1문항
+
+## 7. 학생 기록
+- 차시별 점수, 문항별 결과, 이해도 신호등, 한 줄 성찰
+- 저장: 브라우저 LocalStorage (5차시에 구글 시트, 6차시에 데이터베이스로 확장)
+
+## 8. 화면 구성과 화면 기준
+- 시작(학급 코드·닉네임) / 단원 지도 / 차시 학습 / 단원 마무리 / 내 학습 기록
+- 2단 구성: 왼쪽 단원 지도, 오른쪽 학습 영역
+- 최소 1024×768(태블릿 가로), 1366×768·1920×1080에서도 확인
+- 너비 1024px 미만이면 '태블릿이나 노트북에서 열어 주세요' 안내
+
+## 9. 디자인
+- (색·분위기), 본문 18px 이상, 터치하기 쉬운 큰 버튼
+
+## 10. 기술 조건
+- Vite + React, 서버 코드 없음, GitHub에 올려 Vercel로 배포
+
+## 11. 개발 단계
+- 1단계: 뼈대(시작·단원 지도·차시 화면 틀·내 기록), 화면 기준
+- 2단계: 차시 학습 흐름(목표→개념 카드→형성평가→이해도→성찰)과 기록 저장
+- 3단계: 차시별 탐구 활동
+- 4단계: 단원 마무리와 오답 다시 풀기
+
+## 12. 범위 밖
+- 로그인, 학생 이름·학번 수집, 휴대폰 화면 최적화, 서버 저장`;
+$("#uTpl").textContent=UNIT_TPL;
+const UEX=[["중 정보","중학교 정보","알고리즘과 프로그래밍","4","문제 분해와 알고리즘\n순차·선택·반복 구조\n변수와 리스트\n프로그램 설계와 디버깅","절차 카드를 끌어 올바른 순서로 배열\n명령 블록(앞으로·돌기·반복·만약)을 끌어 로봇이 미로 통과\n코드를 한 줄씩 실행하며 변수·리스트 값 추적"],
+["중 정보 (데이터)","중학교 정보","자료와 정보","3","자료와 정보의 구분\n디지털 표현(이진수·픽셀)\n자료의 수집과 정리","생활 속 사례 카드를 자료·정보로 분류\n픽셀 칸을 눌러 흑백 이미지 만들고 이진수로 확인"],
+["중2 과학","중학교 2학년 과학","물질의 상태 변화","4","물질의 세 가지 상태\n상태 변화와 입자 배열\n상태 변화와 열에너지\n생활 속 상태 변화","물질 카드를 고체·액체·기체로 끌어 놓아 분류\n온도 슬라이더로 입자 모형의 움직임 관찰"],
+["중1 수학","중학교 1학년 수학","좌표평면과 그래프","4","순서쌍과 좌표\n좌표평면과 사분면\n그래프의 이해\n정비례와 반비례 그래프","점을 끌어 놓아 좌표 맞히기\n상황 카드를 알맞은 그래프와 짝짓기"],
+["고1 통합사회","고등학교 1학년 통합사회","인권 보장과 헌법","3","인권의 의미와 변화\n헌법과 기본권\n인권 문제와 해결 방안","생활 사례 카드를 기본권 종류별로 분류\n인권 확장 사건을 연표 순서로 배열"],
+["고 국어","고등학교 1학년 국어","논증하는 글 쓰기","3","주장과 근거\n타당한 근거와 오류\n논증하는 글 고쳐 쓰기","문장을 주장·근거·반론으로 분류\n오류가 있는 근거를 찾아 표시"]];
+$("#unitEx").innerHTML=UEX.map((x,i)=>`<button type="button" class="ghost sm" data-ux="${i}">${x[0]}</button>`).join("");
+$("#unitEx").addEventListener("click",e=>{const b=e.target.closest("[data-ux]");if(!b)return;const x=UEX[b.dataset.ux];$("#uSubj").value=x[1];$("#uName").value=x[2];$("#uN").value=x[3];$("#uLessons").value=x[4];$("#uAct").value=x[5];ub()});
+function ub(){const subj=$("#uSubj").value.trim()||"(학교급·과목)",name=$("#uName").value.trim()||"(단원명)",n=$("#uN").value;
+  const ls=$("#uLessons").value.trim().split(/\n+/).filter(Boolean).map((x,i)=>`${i+1}차시 ${x.trim()}`).join(" / ");const act=$("#uAct").value.trim().split(/\n+/).filter(Boolean).map(x=>"- "+x.trim()).join("\n");
+  const cond="태블릿 가로(1024×768) 이상의 화면(휴대폰은 안내 화면), Vite + React, 서버 없음, 학생 이름·학번은 받지 않고 학급 코드와 닉네임만, 학습 기록은 브라우저 LocalStorage, 차시마다 학습 목표 → 개념 카드 → 탐구 활동 → 형성평가 → 이해도 신호등 → 한 줄 성찰 순서, 개발 단계는 4단계(뼈대 → 차시 학습 → 탐구 활동 → 마무리·기록)";
+  $("#uOut").textContent=`/grill-me ${subj} '${name}' 단원 학습 웹앱을 설계하려고 해. 학생이 수업 중 태블릿·노트북으로 단원 전체(${n}차시)를 따라가는 앱이야.
+차시별 주제: ${ls||"(차시별 주제)"}
+${act?"떠오르는 탐구 활동:\n"+act+"\n":""}이미 정해진 조건(다시 묻지 마): ${cond}.
+차시별 탐구 활동은 학생이 화면에서 무엇을 조작하는지(끌어 놓기, 슬라이더, 짝짓기, 순서 맞추기 등)까지 정해줘. 형성평가 문항 수·유형, 이해도 결과를 어떻게 쓸지도 물어봐줘.
+질문과 추천 답은 모두 한국어로 쓰고, 질문은 12개 안에 끝내줘. 우리가 합의하기 전에는 파일을 만들거나 코드를 쓰지 마.`;
+  $("#gSave").textContent=`좋아, 합의했어. 지금까지 정한 내용을 아래 형식 그대로 이 폴더의 prd.md 파일로 저장해줘.
+형성평가는 차시마다 실제 문항과 정답·해설까지 써 주고, 개발 단계는 4단계로 나눠줘. 아직 앱 코드는 만들지 마.
+저장한 뒤 차시별 탐구 활동을 한 줄씩 요약해서 보여줘.
+
+${UNIT_TPL}`;
+  $("#uOut2").textContent=`너는 교사의 단원 학습 웹앱 기획을 돕는 기획자야.
+학교급·과목: ${subj} / 단원: ${name} / 차시 수: ${n}
+차시별 주제: ${ls||"(차시별 주제)"}
+${act?"떠오르는 탐구 활동:\n"+act+"\n":""}
+아래 prd.md 형식의 항목을 채우기 위해 나에게 질문을 한 번에 하나씩 해줘. 질문은 모두 10개 이내로 하고, 위에서 알려 준 내용은 다시 묻지 마.
+차시별 탐구 활동은 학생이 화면에서 무엇을 조작하는지까지 꼭 물어봐줘. 내가 모르겠다고 하면 선택지를 2~3개 제안해줘.
+질문이 모두 끝나면 아래 형식 그대로 prd.md 전체를 마크다운 코드 블록 하나로 작성해줘. 형성평가 문항은 차시마다 실제 문항과 정답·해설까지 써줘.
+조건: ${cond}.
+
+${UNIT_TPL}`}
+$$("#uSubj,#uName,#uLessons,#uAct").forEach(e=>e.addEventListener("input",ub));$("#uN").addEventListener("change",ub);ub();
+const UF=["prd.md의 3차시 탐구 활동을 학생 조작이 보이게 더 구체적으로 고쳐줘.","prd.md의 형성평가 문항을 차시마다 4문항으로 늘리고 해설을 한 문장씩 붙여줘.","prd.md에 단원 마무리 서술형 문항과 채점 기준 3가지를 추가해줘.","prd.md의 개발 단계가 너무 커. 1단계에는 화면 틀만 넣도록 나눠줘."];
+const GA=["1번으로 하되, 처음엔 블록 3개만 주고 성공하면 반복 블록이 열리게 해줘.","선택지 차이를 학생 입장에서 한 줄씩 설명해줘.","이 질문은 나중에 정할게. 다음 질문으로 넘어가 줘.","남은 질문은 추천 답으로 정하고 지금까지 합의한 내용을 정리해줘."];
+$("#gAns").innerHTML=GA.map(c=>`<li><span>${c}</span><button type="button" class="ghost sm" data-text="${esc(c)}">복사</button></li>`).join("");
+$("#uFix").innerHTML=UF.map(c=>`<li><span>${c}</span><button type="button" class="ghost sm" data-text="${esc(c)}">복사</button></li>`).join("");
+const STG=[["1단계 뼈대","이 폴더의 prd.md를 읽고, '개발 단계'의 1단계만 구현해줘.\nVite + React로 프로젝트를 만들고, 시작 화면(학급 코드·닉네임 입력), 왼쪽 단원 지도(차시 목록과 진도), 오른쪽 차시 화면 틀, 내 학습 기록 화면을 만들어줘.\n화면 너비가 1024px보다 좁으면 '태블릿이나 노트북에서 열어 주세요' 안내 화면을 보여줘."],
+["2단계 차시 학습","prd.md의 2단계를 구현해줘.\n차시마다 학습 목표 → 개념 카드(넘기기) → 형성평가 → 이해도 신호등(알겠다·헷갈린다·모르겠다) → 한 줄 성찰 순서로 진행되게 하고, 차시를 마치면 점수·문항별 결과·이해도·성찰을 LocalStorage에 저장해 단원 지도와 내 학습 기록에 보여줘.\n개념 카드와 문항 내용은 prd.md에 적힌 것을 써줘."],
+["3단계 탐구 활동","prd.md에 적힌 {L}차시 탐구 활동을 만들어줘.\n태블릿에서 손가락으로도 조작할 수 있어야 하고(끌어 놓기는 터치 지원), 활동을 마치면 형성평가로 넘어가게 해줘.\n다른 차시는 아직 건드리지 마."],
+["4단계 마무리·기록","prd.md의 4단계를 구현해줘.\n단원 마무리 화면에 종합 문항과 서술형 1문항을 넣고, 내 학습 기록에서 틀린 문항만 다시 풀 수 있게 해줘. 모든 차시를 마치면 단원 지도에 완료 배지를 보여줘."]];
+const IO=[["화면 확인","완료 후 1024×768과 1366×768 크기에서 직접 실행해 확인하고 결과를 보고해줘.",1],["다른 화면 유지","이번 단계와 관계없는 화면과 기능은 그대로 둬.",1],["개인정보 금지","학생 이름·학번은 입력받지 마.",1],["커밋까지","확인이 끝나면 '(단계 이름) 완료'라는 메시지로 커밋해줘.",0]];
+$("#stg").innerHTML=STG.map((t,i)=>`<label class="chip"><input type="radio" name="stg" value="${i}" ${i===0?"checked":""}>${t[0]}</label>`).join("");
 $("#iopt").innerHTML=IO.map((t,i)=>`<label class="chip"><input type="checkbox" data-io="${i}" ${t[2]?"checked":""}>${t[0]}</label>`).join("");
-function b4(){const t=IT[+document.querySelector('input[name=itype]:checked').value];const o=$$("#iopt input:checked").map(c=>IO[c.dataset.io][1]);
-  $("#p4").textContent=`이 퀴즈 앱에 '${t[0]}' 기능을 추가해줘.\n${t[1]}\n먼저 구현 계획을 보여주고, 내가 승인하면 진행해.${o.length?"\n"+o.join("\n"):""}`}
-$$("#itype input,#iopt input").forEach(e=>e.addEventListener("change",b4));b4();
-const PC=["버튼은 결과 화면 맨 아래에 두고, 다른 화면은 건드리지 마.","서버 코드나 로그인 기능은 추가하지 마. 프론트엔드만 고쳐 줘.","새 패키지를 설치하지 말고 지금 있는 코드만으로 만들어 줘.","이름 입력란은 빼고 닉네임(또는 번호)만 받게 계획을 고쳐 줘.","계획이 좋아. 이대로 진행해 줘."];
+function b4(){const k=+document.querySelector('input[name=stg]:checked').value;const t=STG[k];$("#stgLessonWrap").hidden=k!==2;
+  const o=$$("#iopt input:checked").map(c=>IO[c.dataset.io][1].replace("(단계 이름)",t[0]));
+  $("#p4").textContent=`${t[1].replace("{L}",$("#stgLesson").value)}\n먼저 구현 계획을 보여주고, 내가 승인하면 진행해.${o.length?"\n"+o.join("\n"):""}`}
+$$("#stg input,#iopt input").forEach(e=>e.addEventListener("change",b4));$("#stgLesson").addEventListener("change",b4);b4();
+const PC=["이번에는 1단계만 해줘. 탐구 활동은 다음 단계에서 할게.","서버 코드나 로그인 기능은 추가하지 마. 프론트엔드만 만들어 줘.","이름 입력란은 빼고 학급 코드와 닉네임만 받게 계획을 고쳐 줘.","새 패키지는 꼭 필요한 것만 설치하고, 무엇을 왜 설치하는지 알려 줘.","계획이 좋아. 이대로 진행해 줘."];
 $("#planCm").innerHTML=PC.map(c=>`<li><span>${c}</span><button type="button" class="ghost sm" data-text="${esc(c)}">복사</button></li>`).join("");
-const FS=["제목 글자를 한 단계 크게 해줘.","정답 표시 색을 초록색으로 바꿔줘.","신호등 버튼 사이 간격을 조금 넓혀줘.","결과 화면 문구를 '수고했어요!'로 바꿔줘.","방금 바꾼 것을 되돌려줘."];
+const FS=["1024×768에서 개념 카드가 잘려. 한 화면에 들어오게 줄여줘.","본문 글자를 한 단계 크게 해줘.","이해도 신호등 버튼을 손가락으로 누르기 쉽게 더 크게 해줘.","왼쪽 단원 지도의 완료 차시 색을 초록색으로 바꿔줘.","방금 바꾼 것을 되돌려줘."];
 $("#fastList").innerHTML=FS.map(c=>`<li><span>${c}</span><button type="button" class="ghost sm" data-text="${esc(c)}">복사</button></li>`).join("");
+function pu(){const u=$("#newRepo").value.trim()||"(새 저장소 주소)";$("#push4").textContent=`지금까지 만든 내용을 한국어 커밋 메시지로 커밋하고, 아래 GitHub 저장소를 원격 저장소로 연결해 푸시해줘. .gitignore에 node_modules와 .env가 들어 있는지도 확인해줘. 실행할 명령은 먼저 보여주고 내 승인을 받아.\n${u}`}
+$("#newRepo").addEventListener("input",pu);pu();
 
 /* ---------- 5차시: Apps Script generator ---------- */
 function gs(){
@@ -1171,7 +1447,7 @@ const SHEET_NAME = '결과';
 const MODEL = 'gemini-flash-latest';
 const FEEDBACK_GUIDE = ${JSON.stringify(guide)};
 
-// 학생 앱이 결과를 보내면 실행됩니다.
+// 단원 앱이 차시 결과(또는 단원 마무리)를 보내면 실행됩니다.
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
@@ -1179,11 +1455,12 @@ function doPost(e) {
     // AI에는 서술형 답만 보냅니다(닉네임은 보내지 않음).
     const feedback = essay ? getFeedback(essay) : '';
     const results = Array.isArray(data.results) ? data.results.join(',') : String(data.results || '');
-    const understanding = data.understanding ? JSON.stringify(data.understanding) : '';
+    const score = data.total ? (data.score + '/' + data.total) : (data.score ?? '');
+    const understanding = typeof data.understanding === 'object' && data.understanding ? JSON.stringify(data.understanding) : String(data.understanding || '');
     const lock = LockService.getScriptLock();
     lock.waitLock(10000);
     try {
-      getSheet().appendRow([new Date(), String(data.nickname || '').slice(0, 20), data.score ?? '', results, understanding, essay, feedback]);
+      getSheet().appendRow([new Date(), String(data.room || '').slice(0, 30), String(data.nickname || '').slice(0, 20), String(data.lesson ?? ''), score, results, understanding, String(data.reflection || '').slice(0, 300), essay, feedback]);
     } finally {
       lock.releaseLock();
     }
@@ -1203,7 +1480,7 @@ function getSheet() {
   let sh = ss.getSheetByName(SHEET_NAME);
   if (!sh) {
     sh = ss.insertSheet(SHEET_NAME);
-    sh.appendRow(['제출 시각', '닉네임', '점수', '문항별 결과', '이해도', '서술형 답', 'AI 피드백']);
+    sh.appendRow(['제출 시각', '학급', '닉네임', '차시', '점수', '문항별 결과', '이해도', '성찰', '서술형 답', 'AI 피드백']);
     sh.setFrozenRows(1);
   }
   return sh;
@@ -1234,21 +1511,27 @@ function json(obj) {
 // 처음 한 번 실행: 권한 승인, '결과' 시트 만들기, AI 피드백 시험
 function testSetup() {
   getSheet();
-  Logger.log(getFeedback('시험용 답안입니다. 차가운 컵에 물이 생기는 것은 물이 컵 밖으로 새기 때문이다.'));
+  Logger.log(getFeedback('시험용 답안입니다. 반복 구조를 쓰면 프로그램이 더 빨리 실행되기 때문이다.'));
 }`;
   $("#gsCode").textContent=code;
 }
 $$("#gLevel,#gQ,#gCrit").forEach(e=>e.addEventListener("input",gs));$("#gLen").addEventListener("change",gs);gs();
-const FO=[["서술형 문항","퀴즈 마지막에 서술형 문항 1개를 추가해줘.",1],["피드백 표시","응답으로 받은 feedback을 결과 화면에 '선생님 AI의 한마디'로 보여줘.",1],["중복 제출 방지","제출 버튼은 한 번만 눌리게 하고, 보내는 동안 '제출 중…'을 보여줘.",1],["실패 안내","전송에 실패하면 '다시 제출' 버튼을 보여줘.",1]];
+const FO=[["마무리 서술형","단원 마무리 화면의 서술형 답을 essay에 담아 보내줘.",1],["피드백 표시","응답으로 받은 feedback을 단원 마무리 화면과 내 학습 기록에 '선생님 AI의 한마디'로 보여줘.",1],["중복 제출 방지","제출 버튼은 한 번만 눌리게 하고, 보내는 동안 '제출 중…'을 보여줘.",1],["실패 보관","전송에 실패하면 결과를 기기에 보관해 두었다가 다음에 다시 보내고, 내 학습 기록에 '제출됨/대기' 표시를 해줘.",1]];
 $("#fOpt").innerHTML=FO.map((t,i)=>`<label class="chip"><input type="checkbox" data-fo="${i}" ${t[2]?"checked":""}>${t[0]}</label>`).join("");
 function b5(){const u=$("#gsUrl").value.trim()||"(웹 앱 URL)";const o=$$("#fOpt input:checked").map(c=>FO[c.dataset.fo][1]);
-  $("#p5").textContent=`퀴즈를 끝내면 지난 시간에 만든 데이터 묶음(nickname, score, results, understanding, essay)을 아래 Apps Script 웹 앱 URL로 전송하는 기능을 추가해줘.\n전송은 fetch POST로 하고, Content-Type은 'text/plain;charset=utf-8', body는 JSON.stringify(데이터)로 보내줘. 응답은 JSON으로 받아.\n${o.join("\n")}${o.length?"\n":""}먼저 구현 계획을 보여주고, 내가 승인하면 진행해. 완료 후 브라우저에서 직접 제출해 보고 확인해줘.\nURL: ${u}`}
+  $("#p5").textContent=`이 단원 학습 앱에서 학생이 차시를 마칠 때마다, 그리고 단원 마무리를 마칠 때 결과 묶음을 아래 Apps Script 웹 앱 URL로 전송하는 기능을 추가해줘.\n결과 묶음: room(학급 코드), nickname, lesson(차시 번호 또는 '마무리'), score(맞힌 개수), total(문항 수), results(문항별 O/X 배열), understanding(이해도 신호등), reflection(한 줄 성찰), essay(마무리 서술형, 없으면 빈 값)\n전송은 fetch POST로 하고, Content-Type은 'text/plain;charset=utf-8', body는 JSON.stringify(데이터)로 보내줘. 응답은 JSON으로 받아.\n${o.join("\n")}${o.length?"\n":""}먼저 구현 계획을 보여주고, 내가 승인하면 진행해. 완료 후 1차시와 단원 마무리를 직접 제출해 보고 확인해줘.\nURL: ${u}`}
 $("#gsUrl").addEventListener("input",b5);$$("#fOpt input").forEach(e=>e.addEventListener("change",b5));b5();
 
 /* ---------- 6차시 ---------- */
 function sq(){const t=$("#sqlType").value;const room=($("#sqlRoom").value.trim()||"class1").replace(/'/g,"").slice(0,30);
-  const cols=t==="board"?`  nickname text not null check (char_length(nickname) between 1 and 20),\n  message text not null check (char_length(message) between 1 and 300)`:`  nickname text not null check (char_length(nickname) between 1 and 20),\n  score int not null check (score between 0 and 100)`;
-  $("#sqlCode").textContent=`-- ${t==="board"?"학급 생각 나눔판":"퀴즈 실시간 리더보드"} 테이블
+  const cols=t==="progress"?`  nickname text not null check (char_length(nickname) between 1 and 20),
+  lesson text not null check (char_length(lesson) between 1 and 10),
+  score int not null check (score between 0 and 100),
+  total int not null default 0 check (total between 0 and 100),
+  understanding text check (understanding in ('알겠다', '헷갈린다', '모르겠다'))`:`  lesson text not null check (char_length(lesson) between 1 and 10),
+  nickname text not null check (char_length(nickname) between 1 and 20),
+  message text not null check (char_length(message) between 1 and 300)`;
+  $("#sqlCode").textContent=`-- ${t==="progress"?"학급 진도판":"차시별 질문 보드"} 테이블
 create table public.${t} (
   id bigint generated always as identity primary key,
   created_at timestamptz not null default now(),
@@ -1266,19 +1549,21 @@ grant select, insert on public.${t} to anon, authenticated;
 create policy "누구나 읽기" on public.${t} for select to anon, authenticated using (true);
 create policy "누구나 쓰기" on public.${t} for insert to anon, authenticated with check (true);
 
--- 새 글이 모든 화면에 바로 나타나도록 실시간(Realtime) 켜기
+-- 새 기록이 모든 화면에 바로 나타나도록 실시간(Realtime) 켜기
 alter publication supabase_realtime add table public.${t};`;b6()}
 $("#sqlType").addEventListener("change",sq);$("#sqlRoom").addEventListener("input",sq);
 function ev(){const u=$("#sbUrl").value.trim()||"https://프로젝트주소.supabase.co",k=$("#sbKey").value.trim()||"sb_publishable_…";
   $("#envOut").textContent=`VITE_SUPABASE_URL=${u}\nVITE_SUPABASE_PUBLISHABLE_KEY=${k}`;
   $("#envWarn").innerHTML=/^sb_secret_|service_role/.test(k)?'<b style="color:#b3261e">이것은 Secret key입니다! 절대 쓰지 마세요. Publishable key(sb_publishable_…)를 복사하세요.</b>':"Publishable key는 브라우저에 공개되는 것을 전제로 한 키라서, 위 SQL의 보안 규칙(RLS)이 데이터를 지켜 줍니다."}
 $$("#sbUrl,#sbKey").forEach(e=>e.addEventListener("input",ev));ev();
-const SO=[["학급 코드","주소 끝의 ?room=학급코드 로 학급을 구분하고, 같은 학급 글만 보여줘.",1],["글자 수 제한","닉네임은 20자, 글은 300자까지만 입력되게 해줘.",1],["최신순 표시","최신 글이 위에 오도록 보여주고, 처음 열 때 최근 50개만 불러와줘.",1],["퀴즈와 연결","퀴즈 결과 화면에서 바로 이 화면으로 이동하는 버튼을 넣어줘.",0]];
-$("#sOpt").innerHTML=SO.map((t,i)=>`<label class="chip"><input type="checkbox" data-so="${i}" ${t[2]?"checked":""}>${t[0]}</label>`).join("");
-function b6(){const t=$("#sqlType").value;const o=$$("#sOpt input:checked").map(c=>SO[c.dataset.so][1]);
-  const what=t==="board"?`'학급 생각 나눔판' 화면을 추가해줘. 학생은 닉네임과 의견만 입력하고, 등록된 의견은 모든 학생 화면에 실시간으로 나타나야 해.\nSupabase 테이블 이름은 board이고 열은 room, nickname, message, created_at이야.`:`'실시간 리더보드' 화면을 추가해줘. 퀴즈를 끝내면 닉네임과 점수가 저장되고, 점수 높은 순 상위 10명이 모든 화면에 실시간으로 갱신돼야 해.\nSupabase 테이블 이름은 scores이고 열은 room, nickname, score, created_at이야.`;
-  $("#p6").textContent=`이 앱에 Supabase를 연동해서 ${what}\n@supabase/supabase-js를 쓰고, 접속 정보는 .env의 VITE_SUPABASE_URL과 VITE_SUPABASE_PUBLISHABLE_KEY에서 읽어줘. .env가 .gitignore에 들어 있는지 확인해줘.\n새 데이터는 Realtime 구독으로 즉시 반영해줘.\n${o.join("\n")}${o.length?"\n":""}서버 코드는 만들지 마. 먼저 구현 계획을 보여주고, 내가 승인하면 진행해. 완료 후 브라우저 창 두 개로 실시간 반영을 확인해줘.`}
-$$("#sOpt input").forEach(e=>e.addEventListener("change",b6));sq();
+const SO={progress:[["학급 코드","주소 끝의 ?room=학급코드 로 학급을 구분하고, 같은 학급 기록만 보여줘.",1],["최신 기록만","같은 학생의 같은 차시 기록이 여러 개면 가장 최근 것만 표에 보여줘.",1],["이해도 색","이해도는 신호등 색(초록·노랑·빨강)으로 칸을 칠해줘.",1],["학생별 상세","교사 화면에서 닉네임을 누르면 그 학생의 차시별 기록을 옆에 보여줘.",0]],
+questions:[["학급 코드","주소 끝의 ?room=학급코드 로 학급을 구분하고, 같은 학급 글만 보여줘.",1],["글자 수 제한","닉네임은 20자, 글은 300자까지만 입력되게 해줘.",1],["최신순 표시","최신 글이 위에 오도록 보여주고, 처음 열 때 최근 50개만 불러와줘.",1],["교사 모아 보기","교사 화면(/teacher?room=학급코드)에서 차시별 질문을 한꺼번에 모아 보게 해줘.",0]]};
+function so(){const t=$("#sqlType").value;$("#sOpt").innerHTML=SO[t].map((x,i)=>`<label class="chip"><input type="checkbox" data-so="${i}" ${x[2]?"checked":""}>${x[0]}</label>`).join("");$$("#sOpt input").forEach(e=>e.addEventListener("change",b6))}
+function b6(){const t=$("#sqlType").value;if(!$("#sOpt").dataset.t||$("#sOpt").dataset.t!==t){$("#sOpt").dataset.t=t;so()}
+  const o=$$("#sOpt input:checked").map(c=>SO[t][c.dataset.so][1]);
+  const what=t==="progress"?`'학급 진도판'을 추가해줘. 학생이 차시를 마치면 학급 코드·닉네임·차시·점수·문항 수·이해도가 저장되고, 교사 화면(/teacher?room=학급코드)에 학생×차시 표로 실시간 표시돼야 해. 교사 화면은 1366×768 노트북 화면 기준으로 만들어줘.\nSupabase 테이블 이름은 progress이고 열은 room, nickname, lesson, score, total, understanding, created_at이야. understanding 값은 '알겠다', '헷갈린다', '모르겠다' 중 하나야.`:`'차시별 질문 보드'를 추가해줘. 학생은 차시 학습 화면 옆(또는 아래)에서 질문이나 의견을 남기고, 같은 학급·같은 차시 글이 모든 화면에 실시간으로 나타나야 해.\nSupabase 테이블 이름은 questions이고 열은 room, lesson, nickname, message, created_at이야.`;
+  $("#p6").textContent=`이 단원 학습 앱에 Supabase를 연동해서 ${what}\n@supabase/supabase-js를 쓰고, 접속 정보는 .env의 VITE_SUPABASE_URL과 VITE_SUPABASE_PUBLISHABLE_KEY에서 읽어줘. .env가 .gitignore에 들어 있는지 확인해줘.\n새 데이터는 Realtime 구독으로 즉시 반영해줘. 5차시에 만든 시트 전송 기능은 그대로 둬.\n${o.join("\n")}${o.length?"\n":""}서버 코드는 만들지 마. 먼저 구현 계획을 보여주고, 내가 승인하면 진행해. 완료 후 학생 화면과 교사 화면을 창 두 개로 나란히 열어 실시간 반영을 확인해줘.`}
+sq();
 function ap(){const g=id=>$(id).value.trim();
   $("#apOut").textContent=`[수업 적용 계획]\n· 대상·단원: ${g("#apUnit")||"(학교급·과목·단원)"}\n· 활용 장면: ${$("#apScene").value}\n· 학생 활동: ${g("#apAct")||"(학생 활동)"}\n· 수집·활용 데이터: ${g("#apData")||"(데이터)"}\n· 유의점: ${g("#apCare")||"(유의점)"}\n· 앱 주소: ${g("#apUrl")||"(vercel.app 주소)"}`}
 $$("#apUnit,#apAct,#apData,#apCare,#apUrl").forEach(e=>e.addEventListener("input",ap));$("#apScene").addEventListener("change",ap);ap();
