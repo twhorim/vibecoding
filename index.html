@@ -82,6 +82,7 @@ button.sm{min-height:40px;padding:0 14px;font-size:14px}
 .seg{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .seg button{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .seg button[aria-pressed=true]{background:var(--teal);color:var(--bg);border-color:var(--teal)}
+.sq{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}.sq span{flex-basis:100%;font-weight:600}.sq button{background:transparent;color:var(--ink);border:1px solid var(--line);min-height:36px;padding:4px 12px;font-size:14px}.sq button.ok{background:var(--teal);color:var(--bg);border-color:var(--teal)}.sq button.no{border-color:#b3261e;color:#b3261e}.sq em{flex-basis:100%;font-style:normal;font-size:14px;color:var(--mut)}
 .pmode{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.pmode button{background:transparent;color:var(--ink);border:1px solid var(--line);min-height:36px;padding:4px 14px;font-size:14px}.pmode button[aria-pressed=true]{background:var(--teal);color:var(--bg);border-color:var(--teal)}
 .pmine{min-height:150px;margin:10px 0 12px}.pnote{margin:0 0 14px}
 .lines{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;max-width:900px}
@@ -245,8 +246,29 @@ footer{color:var(--mut);font-size:14px}
   <p class="lead">① 3줄로 퀴즈 앱을 무작정 만들고 → ② AI가 그 앱을 어떻게 이해했는지 설계도(PRD)로 확인한 뒤 → ③ 인터뷰로 시뮬레이터 설계도를 쓰고 → ④ 그 설계도로 교과 시뮬레이터를 만듭니다.</p>
   <div class="prog"><div class="bar"><i data-bar="s1"></i></div><small data-txt="s1"></small></div>
   <div class="card" style="margin-top:16px;max-width:900px"><h3>프롬프트는 이렇게 보세요</h3><p>도우미의 프롬프트 칸마다 <b>간결 · 자세히 · 내가 쓰기</b>를 고를 수 있습니다(한 번 고르면 모든 칸에 적용). 처음에는 <b>간결</b>로 시작해 <b>무엇을 만들지 · 꼭 지킬 것 · 어떻게 확인할지</b> 세 가지만 담아 보내 보고, 결과를 보며 필요한 조건을 스스로 덧붙여 보세요. 익숙해지면 <b>내가 쓰기</b>로 먼저 써 보고 '자세히'와 비교해 보세요.</p></div>
-  <div class="sub"><a href="#s1-build">① 3줄 프롬프트</a><a href="#s1-ex">교과별 예시</a><a href="#s1-rev">② AI가 이해한 내 앱</a><a href="#s1-prd">③ 시뮬레이터 설계도</a><a href="#s1-sim">④ 시뮬레이터 만들기</a><a href="#s1-work">갈래 ② 업무 도구</a><a href="#s1-fix">수정 요청 문장</a><a href="#s1-err">오류 문장 도우미</a><a href="#s1-save">앱 폴더에 저장</a></div>
+  <div class="sub"><a href="#s1-stack">기술 스택</a><a href="#s1-build">① 3줄 프롬프트</a><a href="#s1-ex">교과별 예시</a><a href="#s1-rev">② AI가 이해한 내 앱</a><a href="#s1-prd">③ 시뮬레이터 설계도</a><a href="#s1-sim">④ 시뮬레이터 만들기</a><a href="#s1-work">갈래 ② 업무 도구</a><a href="#s1-fix">수정 요청 문장</a><a href="#s1-err">오류 문장 도우미</a><a href="#s1-save">앱 폴더에 저장</a></div>
   <ol class="steps" data-steps="s1"></ol>
+</div></section>
+
+<section class="band" id="s1-stack"><div class="wrap">
+  <h2>기술 스택 이해하기: 프론트엔드 · 백엔드 · 데이터베이스</h2>
+  <p class="lead">웹앱은 세 부분이 이어져 움직입니다. 식당에 비유하면 <b>홀 → 주방 → 창고</b>입니다. 어느 부분을 만들고 싶은지 알면 AI에게 무엇을 요청할지가 분명해집니다.</p>
+  <div class="grid">
+    <div class="card"><h3>① 프론트엔드 · 홀</h3><p>사용자가 보고 누르는 <b>화면</b>. 버튼·입력창·결과 표시.<br><small>HTML · CSS · JavaScript, React</small></p><p class="note">요청 예: "파란색 로그인 버튼과 이메일·비밀번호 입력창이 있는 화면 만들어줘"</p></div>
+    <div class="card"><h3>② 백엔드 · 주방</h3><p>화면 뒤에서 요청을 받아 <b>처리하는 규칙</b>. 로그인 확인, 계산, 비밀 키 사용.<br><small>Node.js, Python, Apps Script, Edge Function</small></p><p class="note">요청 예: "이메일과 비밀번호를 확인해서 로그인 처리하는 기능 만들어줘"</p></div>
+    <div class="card"><h3>③ 데이터베이스 · 창고</h3><p>데이터를 <b>저장·조회·수정·삭제</b>하는 곳. 회원, 기록, 게시글.<br><small>Supabase, Firebase, MySQL, (구글 시트)</small></p><p class="note">요청 예: "가입한 회원의 이메일과 이름을 저장할 테이블을 설계해줘"</p></div>
+  </div>
+  <h3 style="margin-top:22px">우리 연수에서는 어디를 만들까요?</h3>
+  <table class="stack"><thead><tr><th>차시</th><th>만드는 것</th><th>프론트엔드</th><th>백엔드</th><th>데이터베이스</th></tr></thead><tbody>
+    <tr><td>1~2차시</td><td>퀴즈·시뮬레이터 (HTML 파일 하나)</td><td>✔</td><td>—</td><td>— (내 브라우저에 저장)</td></tr>
+    <tr><td>3~4차시</td><td>Vite + React 앱, 단원 학습 앱</td><td>✔</td><td>—</td><td>— (내 브라우저에 저장)</td></tr>
+    <tr><td>5차시</td><td>결과를 구글 시트로, AI 피드백(선택)</td><td>✔</td><td>✔ Apps Script, Vercel 함수</td><td>△ 구글 시트</td></tr>
+    <tr><td>6차시</td><td>기록을 데이터베이스로, 서술형 AI 피드백</td><td>✔</td><td>✔ Edge Function</td><td>✔ Supabase</td></tr>
+  </tbody></table>
+  <p class="note">오늘 만드는 퀴즈 앱은 <b>프론트엔드만</b> 있는 앱입니다. 그래서 학생이 푼 결과를 선생님이 볼 수 없고, 새로 고치면 사라집니다. 이 한계를 채우려고 5·6차시에 백엔드와 데이터베이스를 붙입니다.</p>
+  <h3 style="margin-top:22px">잠깐 확인: 이 요청은 어느 부분일까요?</h3>
+  <ol class="lines" id="stackQuiz"></ol>
+  <p class="note" id="stackScore" aria-live="polite"></p>
 </div></section>
 
 <section class="band" id="s1-build"><div class="wrap">
@@ -1141,16 +1163,38 @@ prd.md를 설계 기준으로 삼고, '개발 단계'를 한 번에 하나씩만
 
 <section class="band" id="s6-env"><div class="wrap">
   <h2>앱 접속 정보(.env)</h2>
-  <p class="lead"><b>Project Settings → API Keys</b>에서 Project URL과 <b>Publishable key</b>(sb_publishable_로 시작)를 복사해 넣으세요.</p>
-  <div class="two">
+  <p class="lead">필요한 값은 두 개뿐입니다: <b>Project URL</b>과 <b>Publishable key</b>(sb_publishable_로 시작). Supabase 화면이 자주 바뀌므로 아래에서 가장 쉬운 방법을 쓰세요.</p>
+  <table class="stack"><thead><tr><th>찾는 방법</th><th>순서</th></tr></thead><tbody>
+    <tr><td><b>① Connect 버튼 (추천)</b></td><td>화면 맨 위 프로젝트 이름 옆 초록색 <b>Connect</b> → <b>App Frameworks</b> → <b>.env.local</b> 상자의 두 줄을 <b>통째로</b> 복사 → 아래 '한 번에 붙여 넣기' 칸에 붙여 넣기</td></tr>
+    <tr><td>② API Keys 메뉴</td><td>왼쪽 아래 ⚙ <b>Project Settings → API Keys</b> → Publishable key 복사. URL은 같은 화면이나 Data API 화면에서 복사</td></tr>
+  </tbody></table>
+  <div class="warnbox"><b>자주 헷갈리는 점</b><br>· Data API 화면의 주소 끝 <code>/rest/v1/</code>는 빼야 합니다. 아래 칸에 붙이면 자동으로 지워집니다.<br>· Connect 화면은 Next.js 기준이라 이름이 <code>NEXT_PUBLIC_…</code>로 나옵니다. 우리 앱(Vite)은 <code>VITE_…</code>로 이름만 바꾸면 되고, 아래 칸이 바꿔 줍니다.<br>· 키 상자는 오른쪽이 잘려 보일 수 있습니다. 상자 안을 클릭해 끝까지 선택하세요.<br>· 예전 화면의 <b>anon key</b>(eyJ로 시작)도 동작하지만, 새로 시작하면 <b>Publishable key</b>를 쓰세요.</div>
+  <div class="two" style="margin-top:16px">
     <form class="fields" onsubmit="return false">
+      <div><label class="f" for="sbPaste">한 번에 붙여 넣기 (Connect의 .env.local 두 줄)</label><textarea id="sbPaste" rows="3" spellcheck="false" placeholder="NEXT_PUBLIC_SUPABASE_URL=https://…supabase.co&#10;NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_…"></textarea></div>
       <div><label class="f" for="sbUrl">Project URL</label><input type="url" id="sbUrl" placeholder="https://abcd1234.supabase.co" autocomplete="off"></div>
       <div><label class="f" for="sbKey">Publishable key</label><input type="text" id="sbKey" placeholder="sb_publishable_…" autocomplete="off" spellcheck="false"></div>
     </form>
-    <div class="out"><div class="tag">.env 파일 내용</div><div class="big mono" id="envOut"></div><button type="button" data-copy="#envOut">.env 내용 복사</button>
+    <div class="out"><div class="tag">.env 파일 내용 (Vite 앱용)</div><div class="big mono" id="envOut"></div><button type="button" data-copy="#envOut">.env 내용 복사</button>
     <p class="note" id="envWarn"></p></div>
   </div>
-  <p class="note">Antigravity에서 앱 폴더 맨 위에 <b>.env</b> 파일을 직접 만들어 붙여 넣으세요. 배포용으로는 Vercel → Settings → Environment Variables에 같은 두 값을 넣고 <b>Redeploy</b>합니다.</p>
+  <p class="note">Antigravity에서 앱 폴더 맨 위에 <b>.env</b> 파일을 만들어 붙여 넣거나, 에이전트에게 "아래 두 값을 .env에 넣고 앱이 이 값을 읽게 해줘"라고 보내세요. 배포용으로는 Vercel → Settings → Environment Variables에 같은 두 값을 넣고 <b>Redeploy</b>합니다.</p>
+  <h3 style="margin-top:22px">에이전트에게 키를 알려 줄 때</h3>
+  <table class="stack"><thead><tr><th>값</th><th>대화창에 알려 줘도 되나</th></tr></thead><tbody>
+    <tr><td>Project URL, Publishable key</td><td>괜찮음. 원래 브라우저에 공개되는 값이라, 에이전트가 config.js 같은 파일에 직접 적어도 문제없음 (데이터는 보안 규칙이 지킴)</td></tr>
+    <tr><td>Secret key, 데이터베이스 비밀번호, Gemini 키</td><td><b>절대 안 됨</b>. 에이전트가 "알려 주시면 세팅해 드릴게요"라고 해도 보내지 않음</td></tr>
+  </tbody></table>
+  <h3 style="margin-top:22px">연결 성공 후 꼭 할 일: 보안 규칙 점검</h3>
+  <p class="lead">에이전트가 표를 직접 만들고 "조회·저장·삭제 테스트 성공"이라고 알려 줄 때가 있습니다. 연결이 된 것은 좋은 소식이지만, <b>학생 권한으로 삭제나 수정까지 된다면 보안 규칙이 너무 느슨한 것</b>일 수 있습니다. (삭제 응답 204는 '지운 것이 없음'일 때도 나옵니다.) 아래 둘 중 하나로 확인하세요.</p>
+  <div class="out" style="max-width:900px"><div class="tag">에이전트에게 점검 요청</div><div class="big" id="rlsAsk">Supabase 보안 규칙(RLS)을 점검해줘. 이 앱이 쓰는 모든 표에 대해 ① RLS가 켜져 있는지 ② 학생이 다른 학생의 기록을 읽을 수 있는지 ③ 학생이 기록을 고치거나 지울 수 있는지 표로 정리해줘. 학생은 자기 기록을 쓰고 읽기만, 선생님만 전체 읽기가 되도록 해야 해. 느슨한 정책이 있으면 고칠 SQL을 보여주고, 실행은 내가 SQL Editor에서 할게.</div><button type="button" data-copy="#rlsAsk">요청 복사</button></div>
+  <div class="codehead" style="margin-top:14px"><b>SQL Editor에서 직접 보기</b><button type="button" data-copy="#rlsSql">SQL 복사</button></div>
+  <pre class="code" id="rlsSql">-- 1) 표마다 보안 규칙(RLS)이 켜져 있는지 (rowsecurity가 모두 true여야 함)
+select tablename, rowsecurity from pg_tables where schemaname = 'public';
+
+-- 2) 어떤 정책이 있는지 (cmd가 ALL·UPDATE·DELETE이고 조건이 true뿐이면 너무 느슨함)
+select tablename, policyname, cmd, roles, qual, with_check
+from pg_policies where schemaname = 'public' order by tablename;</pre>
+  <p class="note">에이전트가 오늘 SQL과 다른 이름의 표(예: student_results)를 스스로 만들었다면, 그 표에도 같은 기준(학생은 자기 것만 쓰고 읽기, 수정·삭제 불가, 선생님만 전체 읽기)이 적용됐는지 확인하면 됩니다.</p>
 </div></section>
 
 <section class="band" id="s6-grill"><div class="wrap">
@@ -1233,6 +1277,8 @@ prd.md를 설계 기준으로 삼고, '개발 단계'를 한 번에 하나씩만
 <section class="band" id="s6-trouble"><div class="wrap">
   <h2>막힐 때</h2>
   <table class="stack"><thead><tr><th>이런 상황이면</th><th>이렇게 해 보세요</th></tr></thead><tbody>
+    <tr><td>anon key·Publishable key가 안 보임</td><td>맨 위 초록색 Connect → App Frameworks → .env.local 상자에서 복사 (주소 끝 /rest/v1/은 빼기)</td></tr>
+    <tr><td>에이전트가 "저장·삭제 테스트 성공"이라고 함</td><td>보안 규칙이 느슨할 수 있음 → '접속 정보'의 보안 규칙 점검 요청 또는 SQL로 확인</td></tr>
     <tr><td>"Anonymous sign-ins are disabled"</td><td>Authentication → Sign In / Providers에서 Allow anonymous sign-ins 켜기</td></tr>
     <tr><td>"rate limit" 오류로 학생이 못 들어옴</td><td>Authentication → Rate Limits에서 익명 사용자 한도 올리기. 앱이 매번 새로 로그인하지 않는지도 확인</td></tr>
     <tr><td>저장은 되는데 피드백이 안 옴 (status가 waiting)</td><td>Edge Functions → ai-feedback → <b>Logs</b> 확인. Secrets에 GEMINI_API_KEY가 있는지</td></tr>
@@ -1501,6 +1547,7 @@ s0:[
 ],
 s1:[
  ["캔버스 열기",["<b>Gemini</b>: gemini.google.com → 입력창의 도구에서 '캔버스' 선택","<b>ChatGPT</b>: chatgpt.com → 입력창 '+' 메뉴에서 '캔버스' 선택"],"학교 Workspace 계정이 막혀 있으면 개인 계정으로 로그인하세요."],
+ ["기술 스택 이해하기",["프론트엔드(홀)·백엔드(주방)·데이터베이스(창고) 역할 읽기","'어느 부분일까요?' 6문제 풀어 보기"],"오늘 만드는 퀴즈 앱은 프론트엔드만 있는 앱입니다.","#s1-stack"],
  ["실습 ① 3줄로 퀴즈 앱 무작정 만들기",["아래 빌더에서 학년·과목·단원을 골라 3줄 프롬프트 복사","캔버스에 붙여 넣고 미리보기로 풀어 보기(수정은 1~2번만)"],"캔버스 대화창은 닫지 마세요. 실습 ②에서 이어서 씁니다.","#s1-build"],
  ["실습 ② AI가 이해한 내 앱 확인",["같은 캔버스 대화에서 역설계 프롬프트 보내기","'스스로 정한 것' 표를 읽고 내 의도와 다른 것 2개 고르기"],"","#s1-rev"],
  ["고쳐서 prd.md 받기",["고칠 점 2개를 넣은 수정 요청 보내기","바탕화면에 quiz-app 폴더를 만들고 최종 설계도를 prd.md로 저장"],"","#s1-rev"],
@@ -1570,7 +1617,7 @@ s6:[
  ["표 만들기",["제출 횟수·글자 수 고르기, 트랙 A는 '차시 학습 기록 표'도 체크","SQL 복사 → SQL Editor → Run → Success 확인"],"","#s6-sql"],
  ["선생님 계정 등록",["Authentication → Users → Add user (Auto Confirm)","이메일 넣고 등록 SQL Run → 1줄 나오면 성공"],"","#s6-tch"],
  ["Edge Function ai-feedback 만들기",["문항·채점 기준 넣고 코드 복사","Edge Functions → Via Editor → 이름 ai-feedback → Deploy","Secrets에 GEMINI_API_KEY 저장"],"Gemini 키는 Secrets에만 둡니다.","#s6-fn"],
- ["앱 접속 정보(.env)",["Project URL과 Publishable key로 .env 내용 만들기","앱 폴더 맨 위에 .env 파일 만들어 붙여 넣기"],"Secret key는 절대 쓰지 않습니다.","#s6-env"],
+ ["앱 접속 정보(.env)",["맨 위 Connect → App Frameworks → .env.local 두 줄 복사해 붙여 넣기","앱 폴더 맨 위에 .env 파일 만들어 붙여 넣기","연결되면 보안 규칙(RLS) 점검 요청"],"Secret key·DB 비밀번호·Gemini 키는 대화창에도 보내지 않습니다.","#s6-env"],
  ["앱 수정 또는 새 앱 만들기",["트랙 A: 붙여넣기 방식·시트 전송 고르고 /grill-me 질문 → 합의 → 승인","트랙 B: 새 폴더에서 새 앱 요청 → 승인"],"","#s6-grill"],
  ["붙여넣기 막기·기록 확인",["서술형 칸에 붙여 넣기·끌어다 놓기 해 보기","고른 방식대로 동작하는지, 제출 후 횟수(와 글자 수)가 저장되는지 확인"],"완벽하게 막을 수는 없다는 점을 학생에게도 미리 안내합니다.","#s6-paste"],
  ["선생님 실시간 화면",["같은 대화에서 선생님 화면 요청 → 계획 확인 → 승인"],"","#s6-view"],
@@ -2125,9 +2172,13 @@ function fn(){const qs=QS().map(([id,q,c])=>`  ${id}: {\n    text: ${JSON.string
   $("#fnCode").textContent=$("#tplFn").textContent.trim().replace("__QUESTIONS__",block).replace("__LEN__",$("#fLen").value).replace("__LEVEL__",($("#fLevel").value.trim()||"중학교 정보").replace(/'/g,""));b6g()}
 $$("#fLevel,#fQ1,#fC1,#fQ2,#fC2").forEach(e=>e.addEventListener("input",fn));$("#fLen").addEventListener("change",fn);
 $("#guardCode").textContent=$("#tplGuard").textContent.trim();
-function ev(){const u=$("#sbUrl").value.trim()||"https://프로젝트주소.supabase.co",k=$("#sbKey").value.trim()||"sb_publishable_…";
+function ev(){const u=($("#sbUrl").value.trim().replace(/\/rest\/v1\/?$/,"").replace(/\/+$/,""))||"https://프로젝트주소.supabase.co",k=$("#sbKey").value.trim()||"sb_publishable_…";
   $("#envOut").textContent=`VITE_SUPABASE_URL=${u}\nVITE_SUPABASE_PUBLISHABLE_KEY=${k}`;
-  $("#envWarn").innerHTML=/^sb_secret_|service_role/.test(k)?'<b style="color:#b3261e">이것은 Secret key입니다! 절대 쓰지 마세요. Publishable key(sb_publishable_…)를 복사하세요.</b>':"Publishable key는 브라우저에 공개되는 것을 전제로 한 키라서, 보안 규칙(RLS)이 데이터를 지켜 줍니다."}
+  $("#envWarn").innerHTML=/^sb_secret_|service_role/.test(k)?'<b style="color:#b3261e">이것은 Secret key입니다! 절대 쓰지 마세요. Publishable key(sb_publishable_…)를 복사하세요.</b>':/^eyJ/.test(k)?"예전 방식의 anon key입니다. 동작은 하지만, 가능하면 Publishable key(sb_publishable_…)를 쓰세요.":/rest\/v1/.test($("#sbUrl").value)?"주소 끝의 /rest/v1/은 자동으로 뺐습니다.":"Publishable key는 브라우저에 공개되는 것을 전제로 한 키라서, 보안 규칙(RLS)이 데이터를 지켜 줍니다."}
+function sbParse(){const s=$("#sbPaste").value;
+  const u=s.match(/https:\/\/[a-z0-9-]+\.supabase\.co[^\s"']*/i),k=s.match(/\b(sb_publishable_[A-Za-z0-9_-]+|sb_secret_[A-Za-z0-9_-]+|eyJ[A-Za-z0-9._-]+)/);
+  if(u)$("#sbUrl").value=u[0];if(k)$("#sbKey").value=k[1];ev()}
+$("#sbPaste").addEventListener("input",sbParse);
 $$("#sbUrl,#sbKey").forEach(e=>e.addEventListener("input",ev));ev();
 const PMODE={block:"서술형 칸은 붙여넣기·끌어다 놓기·오른쪽 클릭(길게 누르기) 메뉴를 막아줘(paste, beforeinput의 insertFromPaste, drop, contextmenu). 막을 때마다 '직접 써 보세요' 안내를 보여주고 시도 횟수를 paste_attempts로 저장",
 record:"서술형 칸의 붙여넣기는 허용하되, 붙여 넣을 때마다(paste, beforeinput의 insertFromPaste, drop) 횟수를 paste_attempts, 붙여 넣은 글자 수를 paste_chars로 저장. 학생에게 '붙여넣기는 기록돼요'라고 작게 알려줘"};
@@ -2176,6 +2227,20 @@ sq();fn();
 function ap(){const g=id=>$(id).value.trim();
   $("#apOut").textContent=`[수업 적용 계획]\n· 대상·단원: ${g("#apUnit")||"(학교급·과목·단원)"}\n· 활용 장면: ${$("#apScene").value}\n· 학생 활동: ${g("#apAct")||"(학생 활동)"}\n· 수집·활용 데이터: ${g("#apData")||"(데이터)"}\n· 유의점: ${g("#apCare")||"(유의점)"}\n· 앱 주소: ${g("#apUrl")||"(vercel.app 주소)"}`}
 $$("#apUnit,#apAct,#apData,#apCare,#apUrl").forEach(e=>e.addEventListener("input",ap));$("#apScene").addEventListener("change",ap);ap();
+
+/* ---------- 1차시 기술 스택 확인 ---------- */
+(function(){const Q=[["학생이 문항을 고르면 정답 칸이 초록색으로 바뀌게 해줘",0,"보이는 화면과 반응을 바꾸는 요청이라 프론트엔드입니다."],
+ ["제출한 점수를 학번별로 저장할 표를 설계해줘",2,"무엇을 어떤 칸으로 보관할지 정하는 것은 데이터베이스입니다."],
+ ["선생님 PIN이 맞을 때만 학급 결과를 돌려주게 해줘",1,"규칙을 확인하고 결과를 내주는 일은 화면 뒤 백엔드가 합니다."],
+ ["태블릿 가로 화면에서 버튼을 더 크게 해줘",0,"화면 배치와 크기는 프론트엔드입니다."],
+ ["API 키를 숨긴 채 Gemini에게 피드백을 받아 와줘",1,"비밀 키는 화면에 두면 안 되므로 백엔드(서버 함수)가 처리합니다."],
+ ["지난주에 낸 서술형 답을 학번으로 다시 찾아 보여줘",2,"저장해 둔 기록을 꺼내 오는 일은 데이터베이스(조회)입니다. 보여 주는 부분은 프론트엔드입니다."]];
+ const L=["프론트엔드","백엔드","데이터베이스"],box=$("#stackQuiz");if(!box)return;const got={};
+ box.innerHTML=Q.map((q,i)=>`<li><div class="sq"><span>"${q[0]}"</span>${L.map((l,j)=>`<button type="button" data-q="${i}" data-a="${j}">${l}</button>`).join("")}<em id="sqf${i}"></em></div></li>`).join("");
+ box.addEventListener("click",e=>{const b=e.target.closest("button[data-q]");if(!b)return;const i=+b.dataset.q,a=+b.dataset.a,ok=a===Q[i][1];
+  b.parentElement.querySelectorAll("button").forEach(x=>x.classList.remove("ok","no"));b.classList.add(ok?"ok":"no");
+  $("#sqf"+i).textContent=(ok?"맞아요. ":"다시 생각해 볼까요? ")+(ok?Q[i][2]:"");if(ok)got[i]=1;
+  $("#stackScore").textContent=`${Object.keys(got).length} / ${Q.length} 맞힘`});})();
 
 /* ---------- 프롬프트 보기 방식: 간결 · 자세히 · 내가 쓰기 ---------- */
 const v=s=>{const e=$(s);return e?String(e.value||"").trim():""};
